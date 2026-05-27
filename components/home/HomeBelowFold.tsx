@@ -56,7 +56,7 @@ interface Package {
   desc: string;
   features: string[];
   popular?: boolean;
-  icon: LucideIcon;
+  iconName: string;
 }
 
 interface SerializedCase {
@@ -94,8 +94,8 @@ export default function HomeBelowFold({
 }: HomeBelowFoldProps) {
   return (
     <>
-      <DynamicServiceValuesSection items={serviceValues} />
-      <DynamicPricingSection items={packages} />
+      <DynamicServiceValuesSection items={serviceValues.map(sv => ({ ...sv, icon: iconMap[sv.iconName] }))} />
+      <DynamicPricingSection items={packages.map(pkg => ({ ...pkg, icon: iconMap[pkg.iconName] }))} />
       <DynamicComparisonSection rows={comparisons} />
       <DynamicFeaturedCasesSection cases={serializedCases} />
       <DynamicCtaSection />
