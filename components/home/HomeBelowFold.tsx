@@ -70,7 +70,7 @@ interface Faq {
 interface HomeBelowFoldProps {
   serviceValues: ServiceValue[];
   packages: Package[];
-  comparisons: string[][];
+  comparisons: [string, string, string, string][];
   serializedCases: SerializedCase[];
   faqs: Faq[];
 }
