@@ -21,8 +21,15 @@
   - XML 特殊字符转义（escapeXml），Cache-Control 缓存 1 小时
   - lint 和 build 验证通过
 
+- 添加 Google Analytics 集成：
+  - 创建 components/GoogleAnalytics.tsx 客户端组件
+  - 使用 next/script afterInteractive 策略加载 gtag.js
+  - 通过 NEXT_PUBLIC_GA_ID 环境变量配置，未设置时不渲染
+  - 集成到 app/layout.tsx（import + JSX 渲染）
+  - lint 和 build 验证通过
+
 ### 下一步
-- 添加 Google Analytics 集成
+- 实现多语言支持
 
 ## 2026-05-29
 

@@ -19,7 +19,7 @@
 ### 低优先级
 - [x] 添加单元测试
 - [x] 实现 RSS 订阅
-- [ ] 添加 Google Analytics 集成
+- [x] 添加 Google Analytics 集成
 - [ ] 实现多语言支持
 - [ ] 添加 PWA 支持
 
