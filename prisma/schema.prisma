@@ -23,6 +23,8 @@ model ContactSubmission {
   updatedAt     DateTime @updatedAt
 
   projects Project[]
+
+  @@index([status])
 }
 
 model Project {
