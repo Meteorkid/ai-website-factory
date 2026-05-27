@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -9,6 +10,18 @@ import {
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import HomeBelowFold from "@/components/home/HomeBelowFold";
+
+export const metadata: Metadata = {
+  title: "AI 官网工场 - 7 天上线专业官网 | AI 辅助建站服务",
+  description:
+    "AI 辅助生成、专业团队交付。面向创业团队和中小企业，7 天上线专业、可信、可维护的官网。从设计到部署到维护的一站式服务，套餐价格 3000 元起。",
+  openGraph: {
+    title: "AI 官网工场 - 7 天上线专业官网",
+    description:
+      "AI 辅助生成、专业团队交付。面向创业团队和中小企业，7 天上线专业、可信、可维护的官网。",
+    url: "/",
+  },
+};
 
 const serviceValues = [
   {

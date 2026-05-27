@@ -66,6 +66,20 @@ export default function RootLayout({
         <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AI 官网工场",
+              url: "https://ai-workshop.example.com",
+              description:
+                "AI 辅助生成、专业团队交付的官网建设服务。面向创业团队和中小企业，7 天上线专业官网。",
+              sameAs: [],
+            }),
+          }}
+        />
         <Header />
         <main id="main-content" className="flex-1" tabIndex={-1}>
           <PageTransition>{children}</PageTransition>

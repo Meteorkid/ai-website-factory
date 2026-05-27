@@ -9,6 +9,26 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const caseData = await prisma.case.findUnique({ where: { slug } });
+  if (!caseData) return { title: "案例未找到" };
+
+  const description =
+    (caseData.background as string)?.slice(0, 150) ||
+    `${caseData.clientName} 官网建设案例 — ${caseData.industry}`;
+
+  return {
+    title: `${caseData.title} - 案例详情`,
+    description,
+    openGraph: {
+      title: `${caseData.title} - AI 官网工场案例`,
+      description,
+      url: `/cases/${slug}`,
+    },
+  };
+}
+
 interface DesignConfig {
   style: string;
   primary: string;
