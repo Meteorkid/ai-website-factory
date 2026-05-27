@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { LucideIcon } from "lucide-react";
 
 /* 非首屏组件使用动态导入，减少初始 JS 体积 */
 const DynamicServiceValuesSection = dynamic(
@@ -29,7 +30,7 @@ const DynamicFaqSection = dynamic(
 );
 
 interface ServiceValue {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   title: string;
   desc: string;
   stats: string;
@@ -45,7 +46,7 @@ interface Package {
   desc: string;
   features: string[];
   popular?: boolean;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
 }
 
 interface SerializedCase {
