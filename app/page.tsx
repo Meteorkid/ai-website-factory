@@ -9,9 +9,7 @@ import {
   Sparkles,
   Wrench,
   Zap,
-  Target,
   Globe,
-  Clock,
   Star,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
