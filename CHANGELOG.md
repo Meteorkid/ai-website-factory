@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-05-30
+
+### 已完成
+- 优化 Prisma 查询性能：cases/route.ts 和 projects/route.ts 使用 select 子句替代全字段查询，减少数据传输量
+- 添加数据库索引：ContactSubmission(@@index([status]))、Project(@@index([status]), @@index([deleted]))、Case(@@index([published]), @@index([industry]), @@index([featured]))
+- lint 和 build 验证通过
+
+### 下一步
+- 添加单元测试
+
 ## 2026-05-29
 
 ### 已完成
