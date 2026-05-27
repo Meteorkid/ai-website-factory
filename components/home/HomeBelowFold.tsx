@@ -1,7 +1,17 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { Rocket, Sparkles, Wrench, FileText, Globe, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  Rocket,
+  Sparkles,
+  Wrench,
+  FileText,
+  Globe,
+  Star,
+};
 
 /* 非首屏组件使用动态导入，减少初始 JS 体积 */
 const DynamicServiceValuesSection = dynamic(
@@ -30,7 +40,7 @@ const DynamicFaqSection = dynamic(
 );
 
 interface ServiceValue {
-  icon: LucideIcon;
+  iconName: string;
   title: string;
   desc: string;
   stats: string;
