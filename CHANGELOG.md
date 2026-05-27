@@ -3,6 +3,7 @@
 ## 2026-05-28
 
 ### 已完成
+- 完善移动端响应式适配：案例详情页指标卡片改为单列→三列响应式布局，对比表格最小宽度从680px优化至560px
 - 优化首页加载性能：6个非首屏组件动态导入（ServiceValuesSection、PricingSection、ComparisonSection、FeaturedCasesSection、CtaSection、FaqSection）
 - 创建 HomeBelowFold.tsx 客户端包装组件，解决 Next.js 16 Server Component 中 ssr:false 限制
 - 实现 iconMap 模式：Server Component 传递图标名称字符串，客户端解析为 Lucide 组件引用
