@@ -9,8 +9,10 @@ export default function PageTransition({ children }: { children: ReactNode }) {
   const [transitionStage, setTransitionStage] = useState<"enter" | "idle">("enter");
 
   useEffect(() => {
-    setDisplayChildren(children);
-    setTransitionStage("enter");
+    requestAnimationFrame(() => {
+      setDisplayChildren(children);
+      setTransitionStage("enter");
+    });
     const timer = setTimeout(() => setTransitionStage("idle"), 400);
     return () => clearTimeout(timer);
   }, [pathname, children]);
