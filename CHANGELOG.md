@@ -15,8 +15,14 @@
   - 修复 validateContact 中邮箱/微信号校验使用 cleaned 值的 bug
   - lint 和 build 验证通过
 
+- 实现 RSS 订阅：
+  - 创建 app/feed.xml/route.ts RSS 2.0 路由处理器
+  - 查询已发布案例（select 子句优化），按创建时间倒序，最多 20 条
+  - XML 特殊字符转义（escapeXml），Cache-Control 缓存 1 小时
+  - lint 和 build 验证通过
+
 ### 下一步
-- 实现 RSS 订阅
+- 添加 Google Analytics 集成
 
 ## 2026-05-29
 
