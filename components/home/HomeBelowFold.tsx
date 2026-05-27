@@ -50,16 +50,15 @@ interface Package {
 
 interface SerializedCase {
   id: string;
-  title: string;
   slug: string;
-  description: string;
+  title: string;
+  industry: string;
+  clientName: string;
+  packageName: string;
+  timeline: string;
+  result: string;
   tags: string[];
   pages: string[];
-  thumbnail: string;
-  client: string;
-  industry: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface Faq {
