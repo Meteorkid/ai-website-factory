@@ -23,8 +23,19 @@ export default function Header() {
 
   const toggleTheme = useCallback(() => {
     const shouldUseDark = !document.documentElement.classList.contains("dark");
+    // 添加过渡动画类
+    document.documentElement.classList.add("theme-transition");
     document.documentElement.classList.toggle("dark", shouldUseDark);
     localStorage.setItem("theme", shouldUseDark ? "dark" : "light");
+    // 更新 theme-color meta 标签
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute("content", shouldUseDark ? "#090704" : "#fffdf8");
+    }
+    // 过渡完成后移除动画类
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+    }, 350);
   }, []);
 
   const closeMenu = useCallback(() => {
