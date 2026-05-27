@@ -7,8 +7,16 @@
 - 添加数据库索引：ContactSubmission(@@index([status]))、Project(@@index([status]), @@index([deleted]))、Case(@@index([published]), @@index([industry]), @@index([featured]))
 - lint 和 build 验证通过
 
+- 添加单元测试：
+  - 配置 Vitest 测试框架（vitest.config.ts，jsdom 环境，@vitejs/plugin-react）
+  - 提取联系表单验证逻辑到 lib/validate-contact.ts 纯函数模块
+  - 编写 18 个单元测试覆盖 validateContact、isPhone、isEmail、isWechat
+  - 修复 isEmail/isWechat 空格处理 bug（含空格输入不应通过验证）
+  - 修复 validateContact 中邮箱/微信号校验使用 cleaned 值的 bug
+  - lint 和 build 验证通过
+
 ### 下一步
-- 添加单元测试
+- 实现 RSS 订阅
 
 ## 2026-05-29
 
