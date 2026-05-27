@@ -3,6 +3,7 @@
 ## 2026-05-28
 
 ### 已完成
+- 添加页面过渡动画：创建 PageTransition 客户端组件，基于 usePathname + CSS @keyframes pageEnter 实现路由切换淡入效果
 - 完善移动端响应式适配：案例详情页指标卡片改为单列→三列响应式布局，对比表格最小宽度从680px优化至560px
 - 优化首页加载性能：6个非首屏组件动态导入（ServiceValuesSection、PricingSection、ComparisonSection、FeaturedCasesSection、CtaSection、FaqSection）
 - 创建 HomeBelowFold.tsx 客户端包装组件，解决 Next.js 16 Server Component 中 ssr:false 限制
