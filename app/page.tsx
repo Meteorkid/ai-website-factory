@@ -42,13 +42,6 @@ const DynamicFaqSection = dynamic(
   { ssr: false, loading: () => <div className="py-20" /> }
 );
 
-const heroStats = [
-  { value: "3-7天", label: "单页官网上线", icon: Zap },
-  { value: "7-14天", label: "企业官网交付", icon: Clock },
-  { value: "1-3轮", label: "集中修改边界", icon: Target },
-  { value: "持续", label: "上线后维护托管", icon: ShieldCheck },
-];
-
 const serviceValues = [
   {
     icon: Rocket,
