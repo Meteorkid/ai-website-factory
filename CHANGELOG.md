@@ -16,8 +16,9 @@
 - 数据库重新填充，19个案例数据完整
 - 添加 typecheck 脚本到 package.json
 - 代码推送到 GitHub：https://github.com/Meteorkid/ai-website-factory
+- 实现深色模式完整支持：CSS 变量体系 + .dark 选择器覆盖、::selection 修复、平滑过渡 CSS、toggleTheme 含 meta theme-color 管理、matchMedia 监听系统偏好变化、beforeInteractive 脚本防 FOUC
 
 ### 下一步
-- 优化首页加载性能
-- 完善移动端响应式适配
-- 添加页面过渡动画
+- 优化 SEO（meta 标签、Open Graph、结构化数据）
+- 添加表单验证和错误处理
+- 实现案例搜索防抖
