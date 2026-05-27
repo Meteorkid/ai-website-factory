@@ -88,6 +88,21 @@ export default function Header() {
     setIsOpen(false);
   }, [pathname]);
 
+  // 同步操作系统配色方案变化（仅在用户未手动设置主题时生效）
+  useEffect(() => {
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (localStorage.getItem("theme") !== null) return;
+      document.documentElement.classList.toggle("dark", e.matches);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", e.matches ? "#090704" : "#fffdf8");
+      }
+    };
+    mql.addEventListener("change", handleChange);
+    return () => mql.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <>
       <a href="#main-content" className="skip-link">
