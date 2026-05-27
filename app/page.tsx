@@ -124,7 +124,7 @@ const packages = [
   },
 ];
 
-const comparisons = [
+const comparisons: [string, string, string, string][] = [
   ["上线方式", "自行操作", "项目外包", "团队交付"],
   ["内容表达", "客户自己整理", "依赖沟通质量", "AI 初稿 + 人工校对"],
   ["设计质量", "模板同质化", "看外包水平", "模板复用 + 定制打磨"],
