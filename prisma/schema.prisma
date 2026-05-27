@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model ContactSubmission {
+  id            String   @id @default(cuid())
+  company       String
+  industry      String?
+  contactName   String
+  contact       String
+  package       String?
+  timeline      String?
+  reference     String?
+  description   String?
+  status        String   @default("new") // new, contacted, qualified, converted, closed
+  notes         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  projects Project[]
+}
+
+model Project {
+  id              String   @id @default(cuid())
+  title           String
+  description     String?
+  packageName     String   // Starter, Pro, Premium
+  status          String   @default("planning") // planning, designing, developing, reviewing, launched, maintenance
+  pages           Int      @default(1)
+  revisions       Int      @default(1)
+  revisionUsed    Int      @default(0)
+  price           Float?
+  deadline        DateTime?
+  launchedAt      DateTime?
+  startedAt       DateTime?
+  domain          String?
+  referenceUrl    String?
+  clientName      String?
+  coverUrl        String?
+  deliverables    String?  // JSON array of deliverables
+  submissionId    String?
+  submission      ContactSubmission? @relation(fields: [submissionId], references: [id])
+  deleted         Boolean  @default(false)
+  deletedAt       DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  maintenancePlans MaintenancePlan[]
+  activityLogs     ActivityLog[]
+}
+
+model Template {
+  id          String   @id @default(cuid())
+  name        String
+  industry    String
+  description String?
+  pages       String   // JSON array of page names
+  thumbnail   String?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model MaintenancePlan {
+  id          String   @id @default(cuid())
+  name        String   // 基础维护, 增强维护, 增长优化
+  price       Float
+  period      String   @default("monthly") // monthly, yearly
+  features    String   // JSON array of features
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id])
+  active      Boolean  @default(true)
+  startDate   DateTime @default(now())
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Case {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  title           String
+  industry        String
+  tags            String   @default("[]")   // JSON array
+  clientName      String
+  background      String
+  challenge       String
+  solution        String
+  result          String
+  pages           String   @default("[]")   // JSON array
+  packageName     String
+  timeline        String
+  testimonial     String?
+  testimonialAuthor String?
+  mediaReports    String?  // JSON array: [{source, title, url, date}]
+  featured        Boolean  @default(false)
+  sortOrder       Int      @default(0)
+  published       Boolean  @default(true)
+  designConfig    String?  // JSON: theme colors, layout style, typography
+  images          String   @default("[]")   // JSON array: hero, gallery images
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  projectId String?
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  type      String   // status_change, comment, file_upload, revision
+  content   String
+  author    String   @default("system")
+  createdAt DateTime @default(now())
+}
