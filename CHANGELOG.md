@@ -20,7 +20,8 @@
 - 优化 SEO：每个页面独立 metadata（title、description、keywords）、Open Graph / Twitter Card、metadataBase、robots 指令、Organization JSON-LD 结构化数据
 - 添加表单验证和错误处理：客户端 ContactPageClient.tsx 实现必填校验、手机号/邮箱/微信号格式校验、blur 实时校验、aria-invalid 无障碍属性；服务端 route.ts 同步校验兜底
 
+- 实现案例搜索防抖：CaseFilter 组件搜索框输入 300ms 防抖，使用 useRef + setTimeout/clearTimeout 模式，行业筛选保持立即生效
+
 ### 下一步
-- 实现案例搜索防抖
 - 添加图片懒加载组件
 - 优化 Prisma 查询性能
