@@ -27,7 +27,7 @@ export default function ComparisonSection({
             &larr; 左右滑动查看完整对比 &rarr;
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[680px] text-sm">
+            <table className="w-full min-w-[560px] text-sm">
               <thead>
                 <tr className="border-b border-border">
                   {["对比项", "自助模板建站", "传统外包", "AI 官网工场"].map(

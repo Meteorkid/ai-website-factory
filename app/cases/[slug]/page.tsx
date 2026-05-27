@@ -468,7 +468,7 @@ function ResultSection({ caseData, config, pages }: { caseData: any; config: Des
           }}
         >
           <p className="text-sm leading-relaxed" style={{ color: config.muted, lineHeight: 1.8 }}>{caseData.result}</p>
-          <div className="mt-6 grid grid-cols-3 gap-4">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { icon: Clock, label: "交付周期", value: caseData.timeline },
               { icon: FileText, label: "页面数量", value: `${pages.length} 页` },
