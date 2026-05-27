@@ -51,9 +51,9 @@ export function isPhone(value: string): boolean {
 }
 
 export function isEmail(value: string): boolean {
-  return EMAIL_RE.test(value.replace(/\s/g, ""));
+  return EMAIL_RE.test(value);
 }
 
 export function isWechat(value: string): boolean {
-  return WECHAT_RE.test(value.replace(/\s/g, ""));
+  return WECHAT_RE.test(value);
 }
