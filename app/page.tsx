@@ -3,34 +3,30 @@ import {
   ArrowRight,
   FileText,
   Layers,
-  Rocket,
   ShieldCheck,
   Sparkles,
-  Wrench,
   Zap,
-  Globe,
-  Star,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import HomeBelowFold from "@/components/home/HomeBelowFold";
 
 const serviceValues = [
   {
-    icon: Rocket,
+    iconName: "Rocket",
     title: "AI 驱动效率",
     desc: "AI 辅助生成网站结构、初版文案和页面方向，团队再做人工审核与设计落地。",
     stats: "效率提升 3x",
     color: "from-amber-500 to-orange-500",
   },
   {
-    icon: Sparkles,
+    iconName: "Sparkles",
     title: "专业设计呈现",
     desc: "围绕行业、客户、转化目标和品牌调性组织页面，而不是把模板简单换字。",
     stats: "转化率提升 40%",
     color: "from-purple-500 to-pink-500",
   },
   {
-    icon: Wrench,
+    iconName: "Wrench",
     title: "省心维护托管",
     desc: "上线后继续处理托管、证书、备份、小改动、表单检查和基础访问报告。",
     stats: "99.9% 可用性",
@@ -85,7 +81,7 @@ const packages = [
       "表单接入",
       "3-7 天交付",
     ],
-    icon: FileText,
+    iconName: "FileText",
   },
   {
     id: "pro",
@@ -103,7 +99,7 @@ const packages = [
       "7-14 天交付",
     ],
     popular: true,
-    icon: Globe,
+    iconName: "Globe",
   },
   {
     id: "premium",
@@ -120,7 +116,7 @@ const packages = [
       "数据看板可选",
       "14-30 天交付",
     ],
-    icon: Star,
+    iconName: "Star",
   },
 ];
 
