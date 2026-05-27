@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Search, X } from "lucide-react";
 
 interface CaseFilterProps {
@@ -11,16 +11,25 @@ interface CaseFilterProps {
 export default function CaseFilter({ industries, onFilterChange }: CaseFilterProps) {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // 行业筛选立即生效
   const handleIndustryChange = (industry: string | null) => {
     setSelectedIndustry(industry);
     onFilterChange({ industry, search });
   };
 
-  const handleSearchChange = (value: string) => {
-    setSearch(value);
-    onFilterChange({ industry: selectedIndustry, search: value });
-  };
+  // 搜索框输入防抖，300ms 后才触发筛选
+  const handleSearchChange = useCallback(
+    (value: string) => {
+      setSearch(value);
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        onFilterChange({ industry: selectedIndustry, search: value });
+      }, 300);
+    },
+    [selectedIndustry, onFilterChange],
+  );
 
   const clearFilters = () => {
     setSelectedIndustry(null);
