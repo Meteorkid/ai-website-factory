@@ -12,32 +12,7 @@ import {
   Star,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-
-/* 非首屏组件使用动态导入，减少初始 JS 体积 */
-const DynamicServiceValuesSection = dynamic(
-  () => import("@/components/home/ServiceValuesSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
-const DynamicPricingSection = dynamic(
-  () => import("@/components/home/PricingSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
-const DynamicComparisonSection = dynamic(
-  () => import("@/components/home/ComparisonSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
-const DynamicFeaturedCasesSection = dynamic(
-  () => import("@/components/home/FeaturedCasesSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
-const DynamicCtaSection = dynamic(
-  () => import("@/components/home/CtaSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
-const DynamicFaqSection = dynamic(
-  () => import("@/components/home/FaqSection"),
-  { ssr: false, loading: () => <div className="py-20" /> }
-);
+import HomeBelowFold from "@/components/home/HomeBelowFold";
 
 const serviceValues = [
   {
@@ -355,17 +330,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <DynamicServiceValuesSection items={serviceValues} />
-
-      <DynamicPricingSection items={packages} />
-
-      <DynamicComparisonSection rows={comparisons} />
-
-      <DynamicFeaturedCasesSection cases={serializedCases} />
-
-      <DynamicCtaSection />
-
-      <DynamicFaqSection items={faqs} />
+      <HomeBelowFold serviceValues={serviceValues} packages={packages} comparisons={comparisons} serializedCases={serializedCases} faqs={faqs} />
     </>
   );
 }
