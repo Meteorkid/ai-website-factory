@@ -3,6 +3,9 @@
 ## 2026-05-28
 
 ### 已完成
+- 优化首页加载性能：6个非首屏组件动态导入（ServiceValuesSection、PricingSection、ComparisonSection、FeaturedCasesSection、CtaSection、FaqSection）
+- 创建 HomeBelowFold.tsx 客户端包装组件，解决 Next.js 16 Server Component 中 ssr:false 限制
+- 实现 iconMap 模式：Server Component 传递图标名称字符串，客户端解析为 Lucide 组件引用
 - 韶域文化环案例深度改进：43张分类画廊图片、6篇媒体报道真实链接
 - 新增 mediaReports 字段到 Prisma Case 模型
 - 创建 MediaReportsSection 组件
