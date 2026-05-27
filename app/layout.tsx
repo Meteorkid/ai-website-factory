@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/PageTransition";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const themeScript = `
 (() => {
@@ -86,6 +87,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <RevealOnScroll />
+        <GoogleAnalytics />
       </body>
     </html>
   );
