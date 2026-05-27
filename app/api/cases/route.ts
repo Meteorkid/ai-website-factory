@@ -23,6 +23,18 @@ export async function GET(request: Request) {
 
   const cases = await prisma.case.findMany({
     where,
+    select: {
+      id: true,
+      slug: true,
+      title: true,
+      industry: true,
+      tags: true,
+      clientName: true,
+      packageName: true,
+      featured: true,
+      sortOrder: true,
+      createdAt: true,
+    },
     orderBy: [{ featured: "desc" }, { sortOrder: "asc" }],
   });
 
