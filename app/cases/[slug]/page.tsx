@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, FileText, Package, Quote, TrendingUp, Users, Target, Award, ChevronRight } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import CaseCard from "@/components/cases/CaseCard";
+import LazyImage from "@/components/ui/LazyImage";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -114,7 +115,7 @@ function HeroSection({ caseData, config, images }: { caseData: any; config: Desi
       {/* Hero 背景图 */}
       {images.hero && (
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src={images.hero}
             alt={caseData.title}
             className="h-full w-full object-cover"
@@ -258,7 +259,7 @@ function GallerySection({ images, config }: { images: CaseImages; config: Design
               aspectRatio: "16/9",
             }}
           >
-            <img
+            <LazyImage
               src={heroItem.src}
               alt={heroItem.caption || "项目主图"}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -289,7 +290,7 @@ function GallerySection({ images, config }: { images: CaseImages; config: Design
                   }}
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img
+                    <LazyImage
                       src={item.src}
                       alt={item.caption}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

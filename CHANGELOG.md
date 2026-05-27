@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-05-29
+
+### 已完成
+- 添加图片懒加载组件：创建 LazyImage 客户端组件，基于 IntersectionObserver + 200px rootMargin 实现视口预加载，pulse 占位动画 + opacity 渐显过渡
+- 替换案例详情页 3 处裸 `<img>` 标签为 LazyImage（Hero 背景、画廊主图、画廊网格项）
+- 修复 HTMLImgElement → HTMLImageElement 类型拼写错误
+- lint 和 build 验证通过
+
+### 下一步
+- 优化 Prisma 查询性能
+
 ## 2026-05-28
 
 ### 已完成

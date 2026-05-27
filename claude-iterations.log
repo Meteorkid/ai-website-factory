@@ -167,3 +167,6 @@ Autocompact is thrashing: the context refilled to the limit within 3 turns of th
 Autocompact is thrashing: the context refilled to the limit within 3 turns of the previous compact, 3 times in a row. A file being read or a tool output is likely too large for the context window. Try reading in smaller chunks, or use /clear to start fresh.
 
 第 43 轮结束 | 耗时: 266秒 | 2026年 5月28日 星期四 06时21分53秒 CST
+Autocompact is thrashing: the context refilled to the limit within 3 turns of the previous compact, 3 times in a row. A file being read or a tool output is likely too large for the context window. Try reading in smaller chunks, or use /clear to start fresh.
+
+第 44 轮结束 | 耗时: 453秒 | 2026年 5月28日 星期四 06时29分56秒 CST
