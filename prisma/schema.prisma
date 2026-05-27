@@ -54,6 +54,9 @@ model Project {
 
   maintenancePlans MaintenancePlan[]
   activityLogs     ActivityLog[]
+
+  @@index([status])
+  @@index([deleted])
 }
 
 model Template {
@@ -107,6 +110,10 @@ model Case {
   images          String   @default("[]")   // JSON array: hero, gallery images
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+
+  @@index([published])
+  @@index([industry])
+  @@index([featured])
 }
 
 model ActivityLog {
