@@ -1,8 +1,7 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import {
   ArrowRight,
-  CheckCircle,
-  ChevronDown,
   FileText,
   Layers,
   Rocket,
@@ -14,11 +13,34 @@ import {
   Globe,
   Clock,
   Star,
-  TrendingUp,
-  Users,
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
-import CaseCard from "@/components/cases/CaseCard";
+
+/* 非首屏组件使用动态导入，减少初始 JS 体积 */
+const DynamicServiceValuesSection = dynamic(
+  () => import("@/components/home/ServiceValuesSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
+const DynamicPricingSection = dynamic(
+  () => import("@/components/home/PricingSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
+const DynamicComparisonSection = dynamic(
+  () => import("@/components/home/ComparisonSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
+const DynamicFeaturedCasesSection = dynamic(
+  () => import("@/components/home/FeaturedCasesSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
+const DynamicCtaSection = dynamic(
+  () => import("@/components/home/CtaSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
+const DynamicFaqSection = dynamic(
+  () => import("@/components/home/FaqSection"),
+  { ssr: false, loading: () => <div className="py-20" /> }
+);
 
 const heroStats = [
   { value: "3-7天", label: "单页官网上线", icon: Zap },
