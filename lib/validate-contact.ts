@@ -36,8 +36,8 @@ export function validateContact(data: ContactFormData): ValidationResult {
 
   const cleaned = data.contact.replace(/\s/g, "");
   const isPhone = PHONE_RE.test(cleaned);
-  const isEmail = EMAIL_RE.test(cleaned);
-  const isWechat = WECHAT_RE.test(cleaned);
+  const isEmail = EMAIL_RE.test(data.contact);
+  const isWechat = WECHAT_RE.test(data.contact);
 
   if (!isPhone && !isEmail && !isWechat) {
     return { valid: false, error: "请输入有效的手机号、邮箱或微信号" };
