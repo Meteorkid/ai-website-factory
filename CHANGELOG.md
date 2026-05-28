@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 2026-05-31
+
+### 已完成
+- 实现多语言支持（next-intl 4.12.0）：
+  - 创建 i18n 基础设施：lib/i18n/config.ts（路由配置）、lib/i18n/request.ts（服务端翻译加载）、lib/i18n/navigation.ts（导航工具）
+  - 创建翻译文件：messages/zh.json（中文）、messages/en.json（英文），覆盖 Header、Footer、首页所有文案
+  - 创建 middleware.ts 实现 locale 检测与路由重定向
+  - 创建 app/[locale]/layout.tsx，使用 NextIntlClientProvider 包裹客户端组件
+  - 创建 app/[locale]/page.tsx，首页所有文案改用 getTranslations() 翻译
+  - 将所有营销页面（about、cases、contact、maintenance、pricing、process）移入 app/[locale]/ 目录
+  - Header.tsx 改用 useTranslations + locale-aware Link/usePathname
+  - Footer.tsx 改用 useTranslations + locale-aware Link
+  - 根 layout.tsx 精简为最小 shell，locale layout 承载 Header/Footer/Analytics 等
+  - 根 page.tsx 改为 redirect 到 /zh（默认语言）
+  - next.config.ts 配置 createNextIntlPlugin 指向 lib/i18n/request.ts
+- lint 和 build 验证通过
+
+### 下一步
+- 添加 PWA 支持
+
 ## 2026-05-30
 
 ### 已完成

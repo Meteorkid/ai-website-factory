@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next-intl/link";
+import { Link } from "@/lib/i18n/navigation";
 import {
   ArrowRight,
   FileText,
@@ -27,10 +27,10 @@ export async function generateMetadata({
 
   return {
     title: locale === "zh" ? "AI 官网工场 - 7 天上线专业官网" : "AI Website Factory - Professional Websites in 7 Days",
-    description: t("subtitle"),
+    description: t("hero.subtitle"),
     openGraph: {
       title: locale === "zh" ? "AI 官网工场 - 7 天上线专业官网" : "AI Website Factory - Professional Websites in 7 Days",
-      description: t("subtitle"),
+      description: t("hero.subtitle"),
       url: "/",
     },
   };

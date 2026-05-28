@@ -1,8 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next-intl/link";
-import { usePathname } from "next-intl/navigation";
+import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Menu, Moon, Sparkles, Sun, X } from "lucide-react";
 
