@@ -2,28 +2,30 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, FileText, Package, Quote, TrendingUp, Users, Target, Award, ChevronRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import CaseCard from "@/components/cases/CaseCard";
 import LazyImage from "@/components/ui/LazyImage";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "cases" });
   const caseData = await prisma.case.findUnique({ where: { slug } });
-  if (!caseData) return { title: "案例未找到" };
+  if (!caseData) return { title: t("notFound") };
 
   const description =
     (caseData.background as string)?.slice(0, 150) ||
-    `${caseData.clientName} 官网建设案例 — ${caseData.industry}`;
+    `${caseData.clientName} - ${caseData.industry}`;
 
   return {
-    title: `${caseData.title} - 案例详情`,
+    title: `${caseData.title} - ${t("hero.title")}`,
     description,
     openGraph: {
-      title: `${caseData.title} - AI 官网工场案例`,
+      title: `${caseData.title} - ${t("hero.title")}`,
       description,
       url: `/cases/${slug}`,
     },
@@ -75,14 +77,14 @@ const defaultConfig: DesignConfig = {
   cardStyle: "default",
 };
 
-function extractMetrics(result: string) {
+function extractMetrics(result: string, metricLabels: { growth: string; growthRate: string; improvement: string; conversion: string; delivery: string; goal: string; achieved: string; satisfaction: string; score100: string; quality: string; excellent: string }) {
   const metrics: { icon: any; label: string; value: string; highlight: boolean }[] = [];
   const patterns = [
-    { regex: /(\d+)\+?\s*(次|个|位|家|条)/, label: "业务增长" },
-    { regex: /增长\s*(\d+%?)/, label: "增长幅度" },
-    { regex: /提升\s*(\d+%?)/, label: "效果提升" },
-    { regex: /转化率?\s*(?:达到|为|是)\s*(\d+\.?\d*%?)/, label: "转化率" },
-    { regex: /(\d+)\s*天/, label: "交付周期" },
+    { regex: /(\d+)\+?\s*(次|个|位|家|条)/, label: metricLabels.growth },
+    { regex: /增长\s*(\d+%?)/, label: metricLabels.growthRate },
+    { regex: /提升\s*(\d+%?)/, label: metricLabels.improvement },
+    { regex: /转化率?\s*(?:达到|为|是)\s*(\d+\.?\d*%?)/, label: metricLabels.conversion },
+    { regex: /(\d+)\s*天/, label: metricLabels.delivery },
   ];
 
   for (const p of patterns) {
@@ -95,16 +97,16 @@ function extractMetrics(result: string) {
 
   if (metrics.length === 0) {
     metrics.push(
-      { icon: Target, label: "项目目标", value: "达成", highlight: true },
-      { icon: Users, label: "客户满意度", value: "100%", highlight: true },
-      { icon: Award, label: "交付质量", value: "优秀", highlight: true },
+      { icon: Target, label: metricLabels.goal, value: metricLabels.achieved, highlight: true },
+      { icon: Users, label: metricLabels.satisfaction, value: metricLabels.score100, highlight: true },
+      { icon: Award, label: metricLabels.quality, value: metricLabels.excellent, highlight: true },
     );
   }
 
   return metrics;
 }
 
-function HeroSection({ caseData, config, images }: { caseData: any; config: DesignConfig; images: CaseImages }) {
+function HeroSection({ caseData, config, images, strings }: { caseData: any; config: DesignConfig; images: CaseImages; strings: { breadcrumb: string; packageSuffix: string; deliverySuffix: string } }) {
   const isDark = config.style === "stripe" || config.style === "vercel" || config.style === "tesla" ||
     config.style === "energetic" || config.style === "industrial" || config.style === "authoritative" ||
     config.style === "tech-automotive";
@@ -152,7 +154,7 @@ function HeroSection({ caseData, config, images }: { caseData: any; config: Desi
         <div className="mx-auto max-w-4xl text-center">
           {/* 面包屑导航 */}
           <div className="mb-6 flex items-center justify-center gap-2 text-sm" style={{ color: config.muted }}>
-            <Link href="/cases" className="hover:opacity-80 transition-opacity">案例</Link>
+            <Link href="/cases" className="hover:opacity-80 transition-opacity">{strings.breadcrumb}</Link>
             <ChevronRight className="h-3 w-3" />
             <span style={{ color: config.accent }}>{caseData.industry}</span>
           </div>

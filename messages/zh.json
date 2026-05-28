@@ -509,6 +509,81 @@
     "hero": {
       "title": "案例展示",
       "subtitle": "查看 AI 官网工场为各行业客户交付的官网案例，了解我们的设计标准和服务质量。"
-    }
+    },
+    "notFound": "案例未找到",
+    "viewDetails": "查看详情",
+    "pages": "页",
+    "packageSuffix": "套餐",
+    "deliverySuffix": "交付",
+    "breadcrumb": "案例",
+    "overview": {
+      "client": "客户",
+      "timeline": "交付周期",
+      "pageCount": "页面数量",
+      "package": "套餐"
+    },
+    "gallery": {
+      "title": "项目展示",
+      "mainImage": "项目主图"
+    },
+    "background": {
+      "title": "客户背景",
+      "goalTitle": "项目目标"
+    },
+    "challenge": {
+      "title": "需求与挑战",
+      "coreTitle": "核心挑战",
+      "items": [
+        { "label": "目标明确", "desc": "精准定位需求" },
+        { "label": "时间紧迫", "desc": "高效交付" },
+        { "label": "用户导向", "desc": "体验优先" },
+        { "label": "品质保证", "desc": "专业标准" }
+      ]
+    },
+    "solution": {
+      "title": "我们的方案",
+      "subtitle": "解决方案",
+      "steps": ["需求分析", "视觉设计", "开发实现", "测试上线"]
+    },
+    "result": {
+      "title": "交付成果",
+      "timeline": "交付周期",
+      "pageCount": "页面数量",
+      "packagePlan": "套餐方案",
+      "metrics": {
+        "growth": "业务增长",
+        "growthRate": "增长幅度",
+        "improvement": "效果提升",
+        "conversion": "转化率",
+        "delivery": "交付周期",
+        "goal": "项目目标",
+        "achieved": "达成",
+        "satisfaction": "客户满意度",
+        "score100": "100%",
+        "quality": "交付质量",
+        "excellent": "优秀"
+      }
+    },
+    "testimonial": {
+      "title": "客户评价"
+    },
+    "pagesSection": {
+      "title": "交付页面"
+    },
+    "mediaReports": {
+      "title": "媒体报道",
+      "subtitle": "项目事迹被多家主流媒体报道",
+      "readMore": "阅读原文"
+    },
+    "relatedCases": {
+      "title": "相关案例"
+    },
+    "cta": {
+      "title": "想做类似的官网？",
+      "subtitle": "提交你的需求，我们会根据行业和目标给出专属方案建议。",
+      "bookConsult": "预约沟通",
+      "viewPricing": "查看套餐"
+    },
+    "backToList": "返回案例列表"
   }
 }

@@ -509,6 +509,81 @@
     "hero": {
       "title": "Case Studies",
       "subtitle": "See the websites we have built for clients across industries, and understand our design standards and service quality."
-    }
+    },
+    "notFound": "Case not found",
+    "viewDetails": "View Details",
+    "pages": " pages",
+    "packageSuffix": " Package",
+    "deliverySuffix": " delivery",
+    "breadcrumb": "Cases",
+    "overview": {
+      "client": "Client",
+      "timeline": "Timeline",
+      "pageCount": "Pages",
+      "package": "Package"
+    },
+    "gallery": {
+      "title": "Project Showcase",
+      "mainImage": "Main project image"
+    },
+    "background": {
+      "title": "Client Background",
+      "goalTitle": "Project Goals"
+    },
+    "challenge": {
+      "title": "Requirements & Challenges",
+      "coreTitle": "Core Challenges",
+      "items": [
+        { "label": "Clear Goals", "desc": "Precise requirement positioning" },
+        { "label": "Tight Timeline", "desc": "Efficient delivery" },
+        { "label": "User-Oriented", "desc": "Experience first" },
+        { "label": "Quality Assured", "desc": "Professional standards" }
+      ]
+    },
+    "solution": {
+      "title": "Our Solution",
+      "subtitle": "Solution",
+      "steps": ["Requirement Analysis", "Visual Design", "Development", "Testing & Launch"]
+    },
+    "result": {
+      "title": "Delivery Results",
+      "timeline": "Timeline",
+      "pageCount": "Pages",
+      "packagePlan": "Package Plan",
+      "metrics": {
+        "growth": "Business Growth",
+        "growthRate": "Growth Rate",
+        "improvement": "Performance",
+        "conversion": "Conversion",
+        "delivery": "Timeline",
+        "goal": "Goal",
+        "achieved": "Achieved",
+        "satisfaction": "Satisfaction",
+        "score100": "100%",
+        "quality": "Quality",
+        "excellent": "Excellent"
+      }
+    },
+    "testimonial": {
+      "title": "Client Testimonial"
+    },
+    "pagesSection": {
+      "title": "Delivered Pages"
+    },
+    "mediaReports": {
+      "title": "Media Coverage",
+      "subtitle": "Project covered by multiple mainstream media outlets",
+      "readMore": "Read Full Article"
+    },
+    "relatedCases": {
+      "title": "Related Cases"
+    },
+    "cta": {
+      "title": "Want a similar website?",
+      "subtitle": "Submit your requirements and we will provide tailored suggestions based on your industry and goals.",
+      "bookConsult": "Book a Call",
+      "viewPricing": "View Pricing"
+    },
+    "backToList": "Back to Cases"
   }
 }
