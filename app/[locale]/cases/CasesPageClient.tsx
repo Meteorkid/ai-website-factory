@@ -53,10 +53,10 @@ export default function CasesPageClient({ cases, industries }: CasesPageClientPr
         <div className="section-shell text-center">
           <p className="section-kicker">Cases</p>
           <h1 className="headline-gradient mx-auto mt-3 max-w-4xl text-[42px] font-extrabold leading-none md:text-[76px]">
-            真实案例，真实结果。
+            {t("list.title")}
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            从 AI 工具到本地门店，我们为不同行业的客户交付可上线、可维护、可增长的官网。
+            {t("list.subtitle")}
           </p>
         </div>
       </section>
@@ -67,13 +67,13 @@ export default function CasesPageClient({ cases, industries }: CasesPageClientPr
 
           {filteredCases.length === 0 ? (
             <div className="py-20 text-center">
-              <p className="text-lg text-muted">暂无匹配的案例</p>
+              <p className="text-lg text-muted">{t("list.noResults")}</p>
               <button
                 type="button"
                 onClick={() => setFilters({ industry: null, search: "" })}
                 className="mt-4 text-sm text-accent hover:underline"
               >
-                清除筛选条件
+                {t("list.clearFilters")}
               </button>
             </div>
           ) : (
