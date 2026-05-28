@@ -1,54 +1,58 @@
-import Link from "next/link";
+"use client";
 
-const footerSections = [
-  {
-    title: "服务",
-    links: [
-      { label: "官网建设", href: "/pricing" },
-      { label: "交付流程", href: "/process" },
-      { label: "月度维护", href: "/maintenance" },
-      { label: "资料提交", href: "/contact" },
-    ],
-  },
-  {
-    title: "方案",
-    links: [
-      { label: "Starter", href: "/pricing#starter" },
-      { label: "Pro", href: "/pricing#pro" },
-      { label: "Premium", href: "/pricing#premium" },
-      { label: "维护套餐", href: "/maintenance" },
-    ],
-  },
-  {
-    title: "了解",
-    links: [
-      { label: "案例展示", href: "/cases" },
-      { label: "关于我们", href: "/about" },
-      { label: "常见问题", href: "/pricing#faq" },
-      { label: "联系我们", href: "/contact" },
-    ],
-  },
-  {
-    title: "联系",
-    links: [
-      { label: "提交需求表", href: "/contact" },
-      { label: "预约 30 分钟沟通", href: "/contact" },
-      { label: "广州", href: "/contact" },
-    ],
-  },
-];
+import Link from "next-intl/link";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
+  const footerSections = [
+    {
+      title: t("nav.services"),
+      links: [
+        { label: t("links.pricing"), href: "/pricing" },
+        { label: t("links.process"), href: "/process" },
+        { label: t("links.maintenance"), href: "/maintenance" },
+        { label: t("links.contact"), href: "/contact" },
+      ],
+    },
+    {
+      title: t("nav.resources"),
+      links: [
+        { label: "Starter", href: "/pricing#starter" },
+        { label: "Pro", href: "/pricing#pro" },
+        { label: "Premium", href: "/pricing#premium" },
+        { label: t("links.maintenance"), href: "/maintenance" },
+      ],
+    },
+    {
+      title: t("links.about"),
+      links: [
+        { label: t("links.cases"), href: "/cases" },
+        { label: t("links.about"), href: "/about" },
+        { label: t("links.faq"), href: "/pricing#faq" },
+        { label: t("links.contact"), href: "/contact" },
+      ],
+    },
+    {
+      title: t("nav.contact"),
+      links: [
+        { label: t("links.contact"), href: "/contact" },
+        { label: t("links.about"), href: "/about" },
+      ],
+    },
+  ];
+
   return (
     <footer className="border-t border-border bg-surface/70">
       <div className="section-shell py-10">
         <div className="grid gap-8 md:grid-cols-[1.2fr_repeat(4,1fr)]">
           <div>
             <Link href="/" className="text-base font-bold">
-              AI 官网工场
+              {t("brandName")}
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-              AI 辅助生成，专业团队交付。帮助创业团队和中小企业更快上线专业、可信、可维护的官网。
+              {t("desc")}
             </p>
           </div>
 
@@ -72,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-border pt-5 text-sm text-muted">
-          © 2026 AI 官网工场。保留所有权利。
+          &copy; 2026 {t("copyright")}
         </div>
       </div>
     </footer>

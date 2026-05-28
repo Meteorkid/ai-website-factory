@@ -43,7 +43,6 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
-  const tHeader = await getTranslations({ locale, namespace: "header" });
 
   const trustBadges = [
     { label: t("trustBadges.served.label"), value: t("trustBadges.served.value"), suffix: t("trustBadges.served.suffix") },

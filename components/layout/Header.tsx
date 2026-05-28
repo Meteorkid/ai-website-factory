@@ -1,38 +1,37 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from "next-intl/link";
+import { usePathname } from "next-intl/navigation";
+import { useTranslations } from "next-intl";
 import { Menu, Moon, Sparkles, Sun, X } from "lucide-react";
 
-const navItems = [
-  { label: "首页", href: "/" },
-  { label: "套餐", href: "/pricing" },
-  { label: "案例", href: "/cases" },
-  { label: "流程", href: "/process" },
-  { label: "维护", href: "/maintenance" },
-  { label: "关于", href: "/about" },
-  { label: "联系", href: "/contact" },
-];
-
 export default function Header() {
+  const t = useTranslations("header");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
+  const navItems = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.pricing"), href: "/pricing" },
+    { label: t("nav.cases"), href: "/cases" },
+    { label: t("nav.process"), href: "/process" },
+    { label: t("nav.maintenance"), href: "/maintenance" },
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
+
   const toggleTheme = useCallback(() => {
     const shouldUseDark = !document.documentElement.classList.contains("dark");
-    // 添加过渡动画类
     document.documentElement.classList.add("theme-transition");
     document.documentElement.classList.toggle("dark", shouldUseDark);
     localStorage.setItem("theme", shouldUseDark ? "dark" : "light");
-    // 更新 theme-color meta 标签
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
       meta.setAttribute("content", shouldUseDark ? "#090704" : "#fffdf8");
     }
-    // 过渡完成后移除动画类
     setTimeout(() => {
       document.documentElement.classList.remove("theme-transition");
     }, 350);
@@ -43,7 +42,6 @@ export default function Header() {
     toggleButtonRef.current?.focus();
   }, []);
 
-  // Focus trap for mobile menu
   useEffect(() => {
     if (!isOpen) return;
 
@@ -83,12 +81,10 @@ export default function Header() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, closeMenu]);
 
-  // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // 同步操作系统配色方案变化（仅在用户未手动设置主题时生效）
   useEffect(() => {
     const mql = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
@@ -106,19 +102,19 @@ export default function Header() {
   return (
     <>
       <a href="#main-content" className="skip-link">
-        跳转到主要内容
+        {t("skipLink")}
       </a>
       <header className="sticky top-0 z-50 px-3 py-3">
         <nav
           className="liquid-glass mx-auto flex h-14 max-w-[1120px] items-center justify-between rounded-full px-3 pl-5"
           role="navigation"
-          aria-label="主导航"
+          aria-label={t("mainNavLabel")}
         >
           <Link href="/" className="flex items-center gap-2 text-sm font-bold">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-accent-soft text-accent">
               <Sparkles className="h-4 w-4" />
             </span>
-            <span>AI 官网工场</span>
+            <span>{t("brandName")}</span>
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
@@ -143,20 +139,20 @@ export default function Header() {
 
           <div className="hidden items-center gap-2 md:flex">
             <Link href="/dashboard" className="glass-button px-4 py-2.5 text-sm">
-              我的项目
+              {t("myProject")}
             </Link>
             <button
               type="button"
               onClick={toggleTheme}
               className="glass-button h-10 w-10 p-0"
-              aria-label="切换浅色或深色模式"
-              title="切换浅色或深色模式"
+              aria-label={t("themeToggle")}
+              title={t("themeToggle")}
             >
               <Sun className="theme-icon-sun h-4 w-4" />
               <Moon className="theme-icon-moon h-4 w-4" />
             </button>
             <Link href="/contact" className="amber-button px-5 py-2.5 text-sm">
-              预约沟通
+              {t("bookConsult")}
             </Link>
           </div>
 
@@ -165,7 +161,7 @@ export default function Header() {
               type="button"
               onClick={toggleTheme}
               className="glass-button h-10 w-10 p-0"
-              aria-label="切换浅色或深色模式"
+              aria-label={t("themeToggle")}
             >
               <Sun className="theme-icon-sun h-4 w-4" />
               <Moon className="theme-icon-moon h-4 w-4" />
@@ -175,7 +171,7 @@ export default function Header() {
               type="button"
               className="glass-button h-10 w-10 p-0"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? "关闭菜单" : "打开菜单"}
+              aria-label={isOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
@@ -188,7 +184,7 @@ export default function Header() {
           id="mobile-menu"
           ref={menuRef}
           role="dialog"
-          aria-label="移动端导航菜单"
+          aria-label={t("mobileMenuLabel")}
           aria-modal="true"
           className="md:hidden"
           style={{
@@ -221,7 +217,7 @@ export default function Header() {
                 className="amber-button mt-2 px-5 py-3 text-sm"
                 onClick={closeMenu}
               >
-                预约沟通
+                {t("bookConsult")}
               </Link>
             </div>
           </div>

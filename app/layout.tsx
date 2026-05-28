@@ -1,24 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import PageTransition from "@/components/PageTransition";
-import RevealOnScroll from "@/components/RevealOnScroll";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
-
-const themeScript = `
-(() => {
-  try {
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldUseDark = storedTheme ? storedTheme === "dark" : prefersDark;
-    document.documentElement.classList.toggle("dark", shouldUseDark);
-  } catch {
-    document.documentElement.classList.remove("dark");
-  }
-})();
-`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-workshop.example.com"),
@@ -62,32 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className="h-full antialiased" suppressHydrationWarning>
-      <head>
-        <Script id="theme-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
+    <html lang="zh" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex min-h-full flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "AI 官网工场",
-              url: "https://ai-workshop.example.com",
-              description:
-                "AI 辅助生成、专业团队交付的官网建设服务。面向创业团队和中小企业，7 天上线专业官网。",
-              sameAs: [],
-            }),
-          }}
-        />
-        <Header />
-        <main id="main-content" className="flex-1" tabIndex={-1}>
-          <PageTransition>{children}</PageTransition>
-        </main>
-        <Footer />
-        <RevealOnScroll />
-        <GoogleAnalytics />
+        {children}
       </body>
     </html>
   );
