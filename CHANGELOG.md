@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-06-01
+
+### 已完成
+- 添加 PWA 支持：
+  - 创建 public/manifest.json（应用名称、图标、主题色、显示模式）
+  - 创建 public/icon-192.svg 和 public/icon-512.svg 应用图标
+  - 创建 public/sw.js Service Worker（静态资源缓存 + 离线回退）
+  - locale layout 添加 manifest 链接和 themeColor（通过 viewport 导出）
+  - 添加 Service Worker 注册脚本（afterInteractive 策略）
+- lint 和 build 验证通过
+
 ## 2026-05-31
 
 ### 已完成

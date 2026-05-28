@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/PageTransition";
@@ -23,8 +23,16 @@ const themeScript = `
 })();
 `;
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fffdf8" },
+    { media: "(prefers-color-scheme: dark)", color: "#090704" },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-workshop.example.com"),
+  manifest: "/manifest.json",
 };
 
 export default async function LocaleLayout({
@@ -68,6 +76,11 @@ export default async function LocaleLayout({
       <Footer />
       <RevealOnScroll />
       <GoogleAnalytics />
+      <Script id="sw-register" strategy="afterInteractive">{`
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
+        }
+      `}</Script>
     </NextIntlClientProvider>
   );
 }
