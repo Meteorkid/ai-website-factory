@@ -193,5 +193,322 @@
       "contact": "联系我们"
     },
     "copyright": "AI 官网工场. All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "kicker": "About",
+      "title": "先把交付做好，再把能力产品化。",
+      "subtitle": "AI 官网工场不是传统外包，也不是一开始就做完整自助建站工具。我们先用 AI 和标准流程提升团队交付效率，再逐步沉淀为 SaaS 能力。"
+    },
+    "positioning": {
+      "kicker": "Positioning",
+      "title": "客户需要的是可上线、可维护、可增长的官网结果。",
+      "p1": "早期项目的核心不是追求功能完整的建站平台，而是跑通高质量交付闭环：客户资料收集、AI 生成初稿、人工设计修正、一键预览部署和持续维护。",
+      "p2": "当交付中的重复动作足够稳定后，再把模板、组件、提示词、部署流程和客户门户逐步产品化。"
+    },
+    "team": {
+      "kicker": "Team",
+      "title": "四条主线，各自对结果负责。",
+      "items": [
+        { "role": "A", "title": "商业负责人", "desc": "负责客户对接、需求评估、项目管理" },
+        { "role": "B", "title": "技术负责人", "desc": "负责 AI 工具链、全栈开发、系统架构" },
+        { "role": "C", "title": "设计负责人", "desc": "负责视觉设计、交互体验、品牌一致性" },
+        { "role": "D", "title": "内容负责人", "desc": "负责文案策划、内容运营、SEO 优化" }
+      ]
+    },
+    "roadmap": {
+      "kicker": "Roadmap",
+      "title": "阶段边界清楚，才不会过早膨胀。",
+      "items": [
+        { "title": "第一阶段", "desc": "官网获客 + 人工 AI 交付，验证真实客户付费意愿和交付效率。" },
+        { "title": "第二阶段", "desc": "沉淀客户门户、预览系统、模板组件库和半自助 AI 方案生成。" },
+        { "title": "第三阶段", "desc": "逐步升级为 AI 生成、标准模板和专业服务结合的 SaaS 平台。" }
+      ]
+    },
+    "cta": {
+      "title": "看看我们如何交付一个官网。",
+      "subtitle": "从需求判断到正式上线，每一步都有输入、输出和修改边界。",
+      "button": "查看交付流程"
+    }
+  },
+  "maintenance": {
+    "hero": {
+      "kicker": "Maintenance",
+      "title": "官网上线不是结束。",
+      "subtitle": "维护服务让网站长期可用、内容可更新、数据可复盘，避免上线后无人处理。"
+    },
+    "plans": {
+      "recommended": "推荐",
+      "cta": "咨询维护方案",
+      "items": [
+        {
+          "name": "基础维护",
+          "price": "499-999 元/月",
+          "desc": "适合只需要保证官网长期可用的小型站点。",
+          "features": ["托管与可用性检查", "SSL 检查", "备份提醒", "小文案修改", "表单可用性检查"]
+        },
+        {
+          "name": "增强维护",
+          "price": "1,999-4,999 元/月",
+          "desc": "适合需要稳定更新内容和查看基础数据的企业站。",
+          "features": ["包含基础维护", "访问报告", "页面性能检查", "内容更新", "维护建议"]
+        },
+        {
+          "name": "增长优化",
+          "price": "5,000 元/月起",
+          "desc": "适合希望官网持续获客、做内容和专题页优化的客户。",
+          "features": ["SEO 内容建议", "专题页或落地页", "转化路径优化", "数据复盘", "增长计划"]
+        }
+      ]
+    },
+    "reasons": {
+      "kicker": "Why Maintenance",
+      "title": "维护的价值，是让官网持续在线。",
+      "items": [
+        { "title": "稳定可用", "desc": "定期检查证书、表单、备份和页面访问状态。" },
+        { "title": "内容可更新", "desc": "官网上线后仍可持续补充案例、动态和服务说明。" },
+        { "title": "数据可复盘", "desc": "通过访问数据和表单反馈判断页面是否需要优化。" },
+        { "title": "改动有边界", "desc": "小改动走维护，大范围改版或新功能单独评估。" }
+      ]
+    },
+    "cta": {
+      "title": "需要一起做维护计划吗？",
+      "subtitle": "可以根据网站规模、内容更新频率和增长目标选择维护范围。",
+      "button": "提交需求"
+    }
+  },
+  "process": {
+    "hero": {
+      "kicker": "Process",
+      "title": "交付流程清楚，项目才不会失控。",
+      "subtitle": "我们用集中反馈、明确输出物和约定修改轮次，控制传统建站项目最容易失控的沟通成本。"
+    },
+    "stages": {
+      "customerLabel": "客户需要做",
+      "teamLabel": "我们负责",
+      "outputLabel": "输出物",
+      "outputPrefix": "输出：",
+      "stagePrefix": "阶段 0",
+      "items": [
+        {
+          "title": "初步沟通",
+          "customer": ["说明行业、业务、预算和上线时间", "提供已有官网或参考网站"],
+          "team": ["判断需求范围", "推荐套餐和下一步资料清单"],
+          "output": "初步方案方向",
+          "outputDesc": "包含需求范围、建议套餐、时间线"
+        },
+        {
+          "title": "资料提交",
+          "customer": ["填写资料表", "上传 Logo、图片、业务介绍和联系方式"],
+          "team": ["检查资料完整度", "整理客户 Brief"],
+          "output": "项目 Brief",
+          "outputDesc": "客户资料整理、图片素材清单、竞品分析"
+        },
+        {
+          "title": "网站策划",
+          "customer": ["确认页面结构和重点内容", "补充必要事实信息"],
+          "team": ["生成网站结构", "整理文案方向和转化路径"],
+          "output": "网站结构稿",
+          "outputDesc": "页面层级、导航结构、内容大纲"
+        },
+        {
+          "title": "页面制作",
+          "customer": ["反馈偏好的视觉方向", "集中确认预览站"],
+          "team": ["设计页面", "开发响应式前端", "生成预览站"],
+          "output": "预览站链接",
+          "outputDesc": "可在线预览的响应式页面"
+        },
+        {
+          "title": "集中修改",
+          "customer": ["一次性提交修改意见", "确认是否超出范围"],
+          "team": ["合并反馈", "完成约定轮次修改"],
+          "output": "修改版预览",
+          "outputDesc": "整合反馈后的更新版本"
+        },
+        {
+          "title": "正式上线",
+          "customer": ["确认验收并支付尾款", "配合域名或备案资料"],
+          "team": ["绑定域名", "配置 SSL、统计、备份和表单"],
+          "output": "正式官网",
+          "outputDesc": "域名上线、SSL/统计/备份就绪"
+        },
+        {
+          "title": "后期维护",
+          "customer": ["提出维护或增长需求", "确认维护套餐"],
+          "team": ["内容小改", "证书检查", "访问报告和优化建议"],
+          "output": "维护记录",
+          "outputDesc": "月度报告、更新日志"
+        }
+      ]
+    },
+    "acceptance": {
+      "kicker": "Acceptance",
+      "title": "验收标准",
+      "items": ["页面范围符合约定", "桌面端和移动端可访问", "导航、链接、表单和联系方式可正常使用", "域名、SSL、统计和备份配置完成", "约定修改轮次内的问题已处理", "客户确认正式上线"]
+    },
+    "cta": {
+      "title": "准备好开始第 1 步了吗？",
+      "subtitle": "先提交基础资料，我们会判断适合的页面范围和交付节奏。",
+      "button": "提交需求"
+    }
+  },
+  "contact": {
+    "hero": {
+      "kicker": "Contact",
+      "title": "先提交需求，再判断方案。",
+      "subtitle": "告诉我们行业、页面范围、上线时间和参考网站，我们会根据资料完整度给出初步建议。"
+    },
+    "form": {
+      "title": "需求表单",
+      "desc": "当前表单用于收集项目 Brief，正式接入方式可按部署环境配置。",
+      "company": "公司或项目名称",
+      "companyPlaceholder": "请输入公司或项目名称",
+      "companyError": "请填写公司或项目名称",
+      "industry": "所属行业",
+      "industryPlaceholder": "请选择行业",
+      "industries": ["AI / SaaS", "企业服务", "教育培训", "本地服务", "制造业", "招商展示", "其他"],
+      "package": "意向套餐",
+      "packagePlaceholder": "请选择",
+      "packages": ["Starter", "Pro", "Premium", "不确定，需要建议"],
+      "contactName": "联系人",
+      "contactNamePlaceholder": "请输入联系人姓名",
+      "contactNameError": "请填写联系人姓名",
+      "contact": "联系方式",
+      "contactPlaceholder": "手机号、邮箱或微信",
+      "contactError": "请填写联系方式",
+      "contactInvalid": "请输入有效的手机号、邮箱或微信号",
+      "timeline": "期望上线时间",
+      "timelinePlaceholder": "请选择",
+      "timelines": ["越快越好", "1 周内", "2 周内", "1 个月内", "暂不确定"],
+      "reference": "参考网站",
+      "referencePlaceholder": "可填写 1-3 个链接",
+      "description": "需求描述",
+      "descriptionPlaceholder": "请说明官网用途、目标客户、需要展示的产品或服务、是否已有素材",
+      "privacyConsent": "我已阅读并同意将所填信息用于项目沟通，不会用于其他用途。",
+      "privacyError": "请阅读并同意隐私政策",
+      "submit": "提交需求",
+      "submitting": "提交中...",
+      "required": "*"
+    },
+    "success": {
+      "title": "已收到需求信息",
+      "desc": "下一步可以根据你的资料完整度，整理页面范围、套餐建议和启动清单。"
+    },
+    "sidebar": {
+      "prepareTitle": "建议准备",
+      "prepareItems": ["公司简介与业务介绍", "Logo、品牌色和图片素材", "目标客户与转化目标", "参考网站或竞品网站", "已有域名或备案信息"],
+      "nextTitle": "下一步",
+      "nextDesc": "我们会先确认预算、行业、页面数量、上线时间和资料完整度，再判断是否适合标准套餐或需要单独评估。",
+      "faqTitle": "常见问题",
+      "faqs": [
+        { "q": "提交后会发生什么？", "a": "我们会先判断页面范围、素材完整度和适合的套餐。" },
+        { "q": "资料不完整可以提交吗？", "a": "可以。资料不完整时，会先进入需求梳理阶段。" },
+        { "q": "是否必须先确定套餐？", "a": "不需要。可以先描述目标，我们再给出建议。" }
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "kicker": "Pricing",
+      "title": "价格要清楚，边界也要清楚。",
+      "subtitle": "官网建设按页面范围、交付周期和修改轮次分层。正式报价会根据需求沟通后确认。"
+    },
+    "packages": {
+      "popular": "推荐",
+      "periodLabel": "周期",
+      "revisionsLabel": "修改",
+      "cta": "获取报价",
+      "items": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "title": "单页官网",
+          "price": "3,000-8,000 元",
+          "target": "个人品牌、活动页、早期项目、Waitlist",
+          "period": "3-7 天",
+          "revisions": "1 轮修改",
+          "features": ["1 个页面", "1 套视觉方向", "基础文案整理", "响应式页面", "基础 SEO", "咨询表单"]
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "title": "企业官网",
+          "price": "10,000-30,000 元",
+          "target": "中小企业、创业公司、校友企业、本地服务公司",
+          "period": "7-14 天",
+          "revisions": "2 轮修改",
+          "features": ["5-8 个页面", "首页/关于/服务/案例/联系", "基础统计", "域名与 SSL 协助", "文章或动态结构", "上线检查"]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "title": "品牌增长官网",
+          "price": "50,000 元起",
+          "target": "品牌展示、招商合作、多语言或 SEO 要求较高的客户",
+          "period": "14-30 天",
+          "revisions": "3 轮修改",
+          "features": ["8-15 个页面", "品牌策略", "深度文案", "多语言可选", "数据看板可选", "增长建议"]
+        }
+      ]
+    },
+    "features": {
+      "kicker": "Features",
+      "title": "功能对比",
+      "subtitle": "每档套餐包含什么、不包含什么，一目了然。",
+      "featureHeader": "功能项",
+      "items": [
+        { "feature": "页面数量", "starter": "1页", "pro": "5-8页", "premium": "8-15页" },
+        { "feature": "视觉定制", "starter": "基础模板", "pro": "深度定制", "premium": "全定制" },
+        { "feature": "修改轮次", "starter": "1轮", "pro": "2轮", "premium": "3轮" },
+        { "feature": "文案深度", "starter": "基础整理", "pro": "深度优化", "premium": "品牌策略" },
+        { "feature": "响应式适配", "starter": true, "pro": true, "premium": true },
+        { "feature": "SEO 基础", "starter": true, "pro": true, "premium": true },
+        { "feature": "统计分析", "starter": false, "pro": true, "premium": true },
+        { "feature": "域名协助", "starter": false, "pro": true, "premium": true },
+        { "feature": "SSL 配置", "starter": true, "pro": true, "premium": true },
+        { "feature": "在线表单", "starter": false, "pro": true, "premium": true },
+        { "feature": "多语言", "starter": false, "pro": false, "premium": true },
+        { "feature": "数据看板", "starter": false, "pro": false, "premium": true },
+        { "feature": "交付周期", "starter": "3-7天", "pro": "7-14天", "premium": "14-30天" },
+        { "feature": "售后支持", "starter": "邮件", "pro": "邮件+微信", "premium": "专属对接" },
+        { "feature": "品牌策略", "starter": false, "pro": "基础", "premium": "完整" },
+        { "feature": "内容策划", "starter": false, "pro": true, "premium": true }
+      ]
+    },
+    "maintenance": {
+      "kicker": "Maintenance",
+      "title": "上线后继续维护。",
+      "items": [
+        ["基础维护", "499-999 元/月", "托管、SSL、备份、小文案修改、表单检查"],
+        ["增强维护", "1,999-4,999 元/月", "访问报告、页面性能检查、内容更新和维护建议"],
+        ["增长优化", "5,000 元/月起", "SEO 内容、专题页、广告落地页和转化优化建议"]
+      ]
+    },
+    "scope": {
+      "includedTitle": "标准包含",
+      "included": ["标准官网页面设计与开发", "基础文案整理与优化", "响应式适配", "咨询表单或联系方式入口", "基础 SEO 标题和描述", "预览站与正式站部署协助", "约定轮次内集中修改"],
+      "excludedTitle": "标准不包含",
+      "excluded": ["复杂会员系统", "电商交易系统", "小程序或 App 开发", "大型后台管理系统", "广告投放执行", "SEO 排名承诺", "无限次改稿"]
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        { "q": "报价是否固定？", "a": "页面数量、文案深度、素材完整度、语言版本和上线要求都会影响报价。我们会在沟通后给出明确范围。" },
+        { "q": "付款方式如何安排？", "a": "建议签约后支付 50% 首款，正式上线前支付 50% 尾款，具体以双方合同为准。" },
+        { "q": "超出套餐范围怎么办？", "a": "超出页面数量、修改轮次或功能范围的需求会单独评估报价，不默认进入标准套餐。" },
+        { "q": "域名、备案和服务器包含吗？", "a": "我们提供协助和建议，具体域名、备案、托管和第三方服务费用按实际情况确认。" }
+      ]
+    },
+    "cta": {
+      "title": "不确定选哪个？",
+      "subtitle": "提交行业、页面数量、上线时间和参考网站，我们会先判断适合的范围。",
+      "button": "预约沟通"
+    }
+  },
+  "cases": {
+    "hero": {
+      "title": "案例展示",
+      "subtitle": "查看 AI 官网工场为各行业客户交付的官网案例，了解我们的设计标准和服务质量。"
+    }
   }
 }

@@ -193,5 +193,322 @@
       "contact": "Contact Us"
     },
     "copyright": "AI Website Factory. All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "kicker": "About",
+      "title": "Get delivery right first, then productize.",
+      "subtitle": "AI Website Factory is not traditional outsourcing, nor a fully self-service website builder from day one. We use AI and standardized processes to improve team delivery efficiency first, then gradually codify capabilities into a SaaS platform."
+    },
+    "positioning": {
+      "kicker": "Positioning",
+      "title": "Clients need a website that is launchable, maintainable, and growth-ready.",
+      "p1": "The core of an early-stage project is not a feature-complete website platform, but a high-quality delivery loop: client intake, AI-generated drafts, human design refinement, one-click preview deployment, and ongoing maintenance.",
+      "p2": "Once the repetitive actions in delivery are stable enough, we gradually productize templates, components, prompts, deployment flows, and client portals."
+    },
+    "team": {
+      "kicker": "Team",
+      "title": "Four main lines, each accountable for results.",
+      "items": [
+        { "role": "A", "title": "Business Lead", "desc": "Client communication, requirement assessment, project management" },
+        { "role": "B", "title": "Tech Lead", "desc": "AI toolchain, full-stack development, system architecture" },
+        { "role": "C", "title": "Design Lead", "desc": "Visual design, interaction experience, brand consistency" },
+        { "role": "D", "title": "Content Lead", "desc": "Copywriting, content operations, SEO optimization" }
+      ]
+    },
+    "roadmap": {
+      "kicker": "Roadmap",
+      "title": "Clear stage boundaries prevent premature expansion.",
+      "items": [
+        { "title": "Phase 1", "desc": "Website client acquisition + manual AI delivery, validating real customer willingness to pay and delivery efficiency." },
+        { "title": "Phase 2", "desc": "Codify client portal, preview system, template component library, and semi-self-service AI plan generation." },
+        { "title": "Phase 3", "desc": "Gradually evolve into a SaaS platform combining AI generation, standard templates, and professional services." }
+      ]
+    },
+    "cta": {
+      "title": "See how we deliver a website.",
+      "subtitle": "From requirement assessment to official launch, every step has inputs, outputs, and revision boundaries.",
+      "button": "View Our Process"
+    }
+  },
+  "maintenance": {
+    "hero": {
+      "kicker": "Maintenance",
+      "title": "Launch is not the end.",
+      "subtitle": "Maintenance keeps your website online, content up-to-date, and data reviewable, avoiding the situation where no one handles issues after launch."
+    },
+    "plans": {
+      "recommended": "Popular",
+      "cta": "Consult Maintenance Plan",
+      "items": [
+        {
+          "name": "Basic",
+          "price": "499-999 CNY/mo",
+          "desc": "For small sites that only need to stay online long-term.",
+          "features": ["Hosting & uptime checks", "SSL checks", "Backup reminders", "Minor copy edits", "Form availability checks"]
+        },
+        {
+          "name": "Enhanced",
+          "price": "1,999-4,999 CNY/mo",
+          "desc": "For business sites that need regular content updates and basic analytics.",
+          "features": ["Includes Basic", "Analytics reports", "Page performance checks", "Content updates", "Maintenance recommendations"]
+        },
+        {
+          "name": "Growth",
+          "price": "From 5,000 CNY/mo",
+          "desc": "For clients who want continuous lead generation, content, and landing page optimization.",
+          "features": ["SEO content suggestions", "Landing pages", "Conversion path optimization", "Data review", "Growth plan"]
+        }
+      ]
+    },
+    "reasons": {
+      "kicker": "Why Maintenance",
+      "title": "The value of maintenance is keeping your website online.",
+      "items": [
+        { "title": "Stable & Available", "desc": "Regular checks on certificates, forms, backups, and page access status." },
+        { "title": "Content Updatable", "desc": "Continue adding cases, updates, and service descriptions after launch." },
+        { "title": "Data Reviewable", "desc": "Use analytics and form feedback to determine if pages need optimization." },
+        { "title": "Changes Bounded", "desc": "Minor changes go through maintenance; major redesigns or new features are assessed separately." }
+      ]
+    },
+    "cta": {
+      "title": "Need help planning maintenance?",
+      "subtitle": "Choose the maintenance scope based on site size, content update frequency, and growth goals.",
+      "button": "Submit Request"
+    }
+  },
+  "process": {
+    "hero": {
+      "kicker": "Process",
+      "title": "Clear process keeps projects on track.",
+      "subtitle": "We use focused feedback, clear deliverables, and agreed revision rounds to control the communication costs that derail traditional website projects."
+    },
+    "stages": {
+      "customerLabel": "Client Responsibilities",
+      "teamLabel": "Our Responsibilities",
+      "outputLabel": "Deliverable",
+      "outputPrefix": "Output: ",
+      "stagePrefix": "Stage 0",
+      "items": [
+        {
+          "title": "Initial Consultation",
+          "customer": ["Describe industry, business, budget, and timeline", "Provide existing website or reference sites"],
+          "team": ["Assess scope", "Recommend package and next steps"],
+          "output": "Preliminary Plan Direction",
+          "outputDesc": "Scope, recommended package, and timeline"
+        },
+        {
+          "title": "Submit Materials",
+          "customer": ["Fill out the materials form", "Upload logo, images, business intro, and contact info"],
+          "team": ["Check material completeness", "Compile client brief"],
+          "output": "Project Brief",
+          "outputDesc": "Client materials, image inventory, competitor analysis"
+        },
+        {
+          "title": "Site Planning",
+          "customer": ["Confirm page structure and key content", "Provide essential factual information"],
+          "team": ["Generate site structure", "Organize copy direction and conversion paths"],
+          "output": "Site Structure Draft",
+          "outputDesc": "Page hierarchy, navigation structure, content outline"
+        },
+        {
+          "title": "Page Production",
+          "customer": ["Share preferred visual direction", "Confirm preview site"],
+          "team": ["Design pages", "Develop responsive frontend", "Generate preview site"],
+          "output": "Preview Site Link",
+          "outputDesc": "Responsive pages previewable online"
+        },
+        {
+          "title": "Focused Revisions",
+          "customer": ["Submit all revision feedback at once", "Confirm if changes are within scope"],
+          "team": ["Consolidate feedback", "Complete agreed revision rounds"],
+          "output": "Revised Preview",
+          "outputDesc": "Updated version with integrated feedback"
+        },
+        {
+          "title": "Official Launch",
+          "customer": ["Confirm acceptance and pay balance", "Provide domain or filing materials"],
+          "team": ["Bind domain", "Configure SSL, analytics, backups, and forms"],
+          "output": "Live Website",
+          "outputDesc": "Domain live, SSL/analytics/backups ready"
+        },
+        {
+          "title": "Ongoing Maintenance",
+          "customer": ["Submit maintenance or growth requests", "Confirm maintenance package"],
+          "team": ["Minor content edits", "Certificate checks", "Analytics reports and optimization suggestions"],
+          "output": "Maintenance Log",
+          "outputDesc": "Monthly reports, update logs"
+        }
+      ]
+    },
+    "acceptance": {
+      "kicker": "Acceptance",
+      "title": "Acceptance Criteria",
+      "items": ["Page scope matches agreement", "Accessible on desktop and mobile", "Navigation, links, forms, and contact info work correctly", "Domain, SSL, analytics, and backups configured", "Issues within agreed revision rounds resolved", "Client confirms official launch"]
+    },
+    "cta": {
+      "title": "Ready to start Step 1?",
+      "subtitle": "Submit your basic materials first, and we will assess the right page scope and delivery pace.",
+      "button": "Submit Request"
+    }
+  },
+  "contact": {
+    "hero": {
+      "kicker": "Contact",
+      "title": "Submit your needs first, then we plan.",
+      "subtitle": "Tell us your industry, page scope, timeline, and reference websites. We will provide initial suggestions based on material completeness."
+    },
+    "form": {
+      "title": "Request Form",
+      "desc": "This form collects the project brief. The actual submission method can be configured based on deployment environment.",
+      "company": "Company or Project Name",
+      "companyPlaceholder": "Enter company or project name",
+      "companyError": "Please enter company or project name",
+      "industry": "Industry",
+      "industryPlaceholder": "Select industry",
+      "industries": ["AI / SaaS", "Business Services", "Education", "Local Services", "Manufacturing", "Exhibition", "Other"],
+      "package": "Preferred Package",
+      "packagePlaceholder": "Select",
+      "packages": ["Starter", "Pro", "Premium", "Not sure, need advice"],
+      "contactName": "Contact Person",
+      "contactNamePlaceholder": "Enter contact name",
+      "contactNameError": "Please enter contact name",
+      "contact": "Contact Info",
+      "contactPlaceholder": "Phone, email, or WeChat",
+      "contactError": "Please enter contact info",
+      "contactInvalid": "Please enter a valid phone number, email, or WeChat ID",
+      "timeline": "Desired Timeline",
+      "timelinePlaceholder": "Select",
+      "timelines": ["ASAP", "Within 1 week", "Within 2 weeks", "Within 1 month", "Not sure yet"],
+      "reference": "Reference Websites",
+      "referencePlaceholder": "Enter 1-3 links",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Describe the website purpose, target audience, products or services to showcase, and whether you have existing materials",
+      "privacyConsent": "I have read and agree to use the submitted information for project communication only.",
+      "privacyError": "Please read and agree to the privacy policy",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "required": "*"
+    },
+    "success": {
+      "title": "Request Received",
+      "desc": "Next, we can organize the page scope, package suggestions, and startup checklist based on your material completeness."
+    },
+    "sidebar": {
+      "prepareTitle": "Prepare",
+      "prepareItems": ["Company intro and business description", "Logo, brand colors, and images", "Target audience and conversion goals", "Reference or competitor websites", "Existing domain or filing info"],
+      "nextTitle": "Next Steps",
+      "nextDesc": "We will first confirm budget, industry, page count, timeline, and material completeness, then determine if a standard package fits or if a custom assessment is needed.",
+      "faqTitle": "FAQs",
+      "faqs": [
+        { "q": "What happens after I submit?", "a": "We will assess the page scope, material completeness, and the right package." },
+        { "q": "Can I submit with incomplete materials?", "a": "Yes. With incomplete materials, we will start with a requirements clarification phase." },
+        { "q": "Do I need to choose a package first?", "a": "No. You can describe your goals first, and we will make recommendations." }
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "kicker": "Pricing",
+      "title": "Clear pricing, clear boundaries.",
+      "subtitle": "Website packages are tiered by page scope, delivery timeline, and revision rounds. Final pricing is confirmed after a requirements discussion."
+    },
+    "packages": {
+      "popular": "Popular",
+      "periodLabel": "Timeline",
+      "revisionsLabel": "Revisions",
+      "cta": "Get a Quote",
+      "items": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "title": "Single-Page Site",
+          "price": "3,000-8,000 CNY",
+          "target": "Personal brands, event pages, early projects, waitlists",
+          "period": "3-7 days",
+          "revisions": "1 round",
+          "features": ["1 page", "1 design direction", "Basic copy editing", "Responsive page", "Basic SEO", "Contact form"]
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "title": "Business Website",
+          "price": "10,000-30,000 CNY",
+          "target": "SMBs, startups, alumni businesses, local service companies",
+          "period": "7-14 days",
+          "revisions": "2 rounds",
+          "features": ["5-8 pages", "Home/About/Services/Cases/Contact", "Basic analytics", "Domain & SSL setup", "Blog or news structure", "Launch checklist"]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "title": "Brand Growth Site",
+          "price": "From 50,000 CNY",
+          "target": "Brand showcase, partnership, multilingual, or SEO-heavy clients",
+          "period": "14-30 days",
+          "revisions": "3 rounds",
+          "features": ["8-15 pages", "Brand strategy", "Deep copywriting", "Multilingual option", "Data dashboard option", "Growth recommendations"]
+        }
+      ]
+    },
+    "features": {
+      "kicker": "Features",
+      "title": "Feature Comparison",
+      "subtitle": "See at a glance what each package includes and excludes.",
+      "featureHeader": "Feature",
+      "items": [
+        { "feature": "Pages", "starter": "1", "pro": "5-8", "premium": "8-15" },
+        { "feature": "Visual Customization", "starter": "Basic template", "pro": "Deep custom", "premium": "Fully custom" },
+        { "feature": "Revision Rounds", "starter": "1", "pro": "2", "premium": "3" },
+        { "feature": "Copy Depth", "starter": "Basic edit", "pro": "Deep polish", "premium": "Brand strategy" },
+        { "feature": "Responsive", "starter": true, "pro": true, "premium": true },
+        { "feature": "Basic SEO", "starter": true, "pro": true, "premium": true },
+        { "feature": "Analytics", "starter": false, "pro": true, "premium": true },
+        { "feature": "Domain Setup", "starter": false, "pro": true, "premium": true },
+        { "feature": "SSL Config", "starter": true, "pro": true, "premium": true },
+        { "feature": "Contact Form", "starter": false, "pro": true, "premium": true },
+        { "feature": "Multilingual", "starter": false, "pro": false, "premium": true },
+        { "feature": "Data Dashboard", "starter": false, "pro": false, "premium": true },
+        { "feature": "Delivery Time", "starter": "3-7d", "pro": "7-14d", "premium": "14-30d" },
+        { "feature": "Support", "starter": "Email", "pro": "Email+WeChat", "premium": "Dedicated" },
+        { "feature": "Brand Strategy", "starter": false, "pro": "Basic", "premium": "Full" },
+        { "feature": "Content Planning", "starter": false, "pro": true, "premium": true }
+      ]
+    },
+    "maintenance": {
+      "kicker": "Maintenance",
+      "title": "Ongoing maintenance after launch.",
+      "items": [
+        ["Basic", "499-999 CNY/mo", "Hosting, SSL, backups, minor copy edits, form checks"],
+        ["Enhanced", "1,999-4,999 CNY/mo", "Analytics reports, page performance, content updates, maintenance tips"],
+        ["Growth", "From 5,000 CNY/mo", "SEO content, landing pages, ad pages, conversion optimization"]
+      ]
+    },
+    "scope": {
+      "includedTitle": "Standard Includes",
+      "included": ["Standard website page design & development", "Basic copy editing & optimization", "Responsive adaptation", "Contact form or info entry", "Basic SEO titles & descriptions", "Preview & production deployment assistance", "Focused revisions within agreed rounds"],
+      "excludedTitle": "Standard Excludes",
+      "excluded": ["Complex membership systems", "E-commerce transaction systems", "Mini-program or app development", "Large admin dashboards", "Ad campaign execution", "SEO ranking guarantees", "Unlimited revisions"]
+    },
+    "faq": {
+      "title": "FAQs",
+      "items": [
+        { "q": "Is the pricing fixed?", "a": "Page count, copy depth, material completeness, language versions, and launch requirements all affect pricing. We provide a clear range after discussion." },
+        { "q": "How is payment structured?", "a": "We suggest 50% upfront after signing, 50% before official launch, subject to contract terms." },
+        { "q": "What if needs exceed the package?", "a": "Requirements exceeding page count, revision rounds, or feature scope are assessed separately and not included in the standard package." },
+        { "q": "Are domain, filing, and hosting included?", "a": "We provide guidance and recommendations. Domain, filing, hosting, and third-party service costs are confirmed based on actual requirements." }
+      ]
+    },
+    "cta": {
+      "title": "Not sure which to choose?",
+      "subtitle": "Submit your industry, page count, timeline, and reference websites. We will assess the right scope first.",
+      "button": "Book a Call"
+    }
+  },
+  "cases": {
+    "hero": {
+      "title": "Case Studies",
+      "subtitle": "See the websites we have built for clients across industries, and understand our design standards and service quality."
+    }
   }
 }
