@@ -1,0 +1,197 @@
+{
+  "header": {
+    "brandName": "AI Website Factory",
+    "skipLink": "Skip to main content",
+    "nav": {
+      "home": "Home",
+      "pricing": "Pricing",
+      "cases": "Cases",
+      "process": "Process",
+      "maintenance": "Maintenance",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "myProject": "My Project",
+    "bookConsult": "Book a Call",
+    "themeToggle": "Toggle light or dark mode",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenuLabel": "Mobile navigation menu",
+    "mainNavLabel": "Main navigation"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI Draft · Expert Polish · Launch & Maintain",
+      "title1": "Design your website",
+      "title2": "like a real product",
+      "subtitle": "For startups, SMBs, and local service companies. Submit your materials, and we handle strategy, copy, design, development, deployment, and ongoing maintenance.",
+      "ctaPrimary": "Submit Your Needs",
+      "ctaSecondary": "View Our Process"
+    },
+    "trustBadges": {
+      "served": { "value": "50+", "suffix": " clients", "label": "Served" },
+      "delivery": { "value": "10", "suffix": " days", "label": "Avg. delivery" },
+      "satisfaction": { "value": "98", "suffix": "%", "label": "Satisfaction" },
+      "renewal": { "value": "85", "suffix": "%", "label": "Renewal rate" }
+    },
+    "process": {
+      "badge": "Efficient Delivery",
+      "title1": "From submission to launch,",
+      "title2": "a clear process means peace of mind.",
+      "subtitle": "We skip complex self-editing tools for now, focusing on delivering high-quality websites first, then codifying repeatable workflows into templates and internal tools.",
+      "cta": "View Full Process",
+      "outputLabel": "Deliverable:",
+      "steps": [
+        {
+          "title": "Submit Materials",
+          "desc": "Client submits business intro, logo, images, reference sites, and contact info.",
+          "output": "Requirements Doc",
+          "time": "Day 1"
+        },
+        {
+          "title": "AI Draft",
+          "desc": "Generate site positioning, page structure, homepage copy, FAQ, and SEO suggestions.",
+          "output": "Strategy Plan",
+          "time": "Day 2-3"
+        },
+        {
+          "title": "Expert Polish",
+          "desc": "Team completes copy review, visual design, responsive development, and preview site.",
+          "output": "Design + Preview",
+          "time": "Day 4-10"
+        },
+        {
+          "title": "Launch & Maintain",
+          "desc": "Configure domain, SSL, forms, analytics, backups, and deliver maintenance guidance.",
+          "output": "Live Website",
+          "time": "Day 11-14"
+        }
+      ]
+    },
+    "serviceValues": {
+      "title": "Why Choose AI Website Factory",
+      "subtitle": "AI-powered efficiency, professional design, worry-free maintenance",
+      "items": [
+        {
+          "title": "AI-Powered Efficiency",
+          "desc": "AI assists with site structure, initial copy, and page direction, while the team handles review and design refinement.",
+          "stats": "3x faster"
+        },
+        {
+          "title": "Professional Design",
+          "desc": "Pages organized around industry, audience, conversion goals, and brand tone — not just swapping template text.",
+          "stats": "40% better conversion"
+        },
+        {
+          "title": "Worry-Free Maintenance",
+          "desc": "Post-launch support includes hosting, certificates, backups, minor edits, form checks, and basic analytics reports.",
+          "stats": "99.9% uptime"
+        }
+      ]
+    },
+    "packages": {
+      "title": "Choose Your Package",
+      "subtitle": "From single-page sites to brand growth websites, for every stage",
+      "popularBadge": "Popular",
+      "items": [
+        {
+          "name": "Starter",
+          "title": "Single-Page Site",
+          "price": "3,000-8,000",
+          "unit": "CNY",
+          "desc": "For personal brands, event pages, early projects, and waitlists.",
+          "features": ["1 page", "1 design direction", "1 round of revisions", "Basic SEO", "Form integration", "3-7 day delivery"]
+        },
+        {
+          "name": "Pro",
+          "title": "Business Website",
+          "price": "10,000-30,000",
+          "unit": "CNY",
+          "desc": "For SMBs, startups, alumni businesses, and local service companies.",
+          "features": ["5-8 pages", "2 rounds of revisions", "Basic analytics", "Domain & SSL setup", "Cases or blog structure", "7-14 day delivery"]
+        },
+        {
+          "name": "Premium",
+          "title": "Brand Growth Site",
+          "price": "50,000",
+          "unit": "CNY+",
+          "desc": "For brand expression, partnership, multilingual, or SEO-heavy content needs.",
+          "features": ["8-15 pages", "3 rounds of revisions", "Brand strategy", "Deep copywriting", "Data dashboard optional", "14-30 day delivery"]
+        }
+      ],
+      "cta": "Get a Quote"
+    },
+    "comparison": {
+      "title": "Three Approaches Compared",
+      "subtitle": "Understand the pros and cons of different website building methods",
+      "headers": ["Dimension", "DIY", "Outsource", "Team Delivery"],
+      "rows": [
+        ["Launch method", "Do it yourself", "Outsource", "Team delivery"],
+        ["Content quality", "Write it yourself", "Depends on communication", "AI draft + human review"],
+        ["Design quality", "Generic templates", "Varies by vendor", "Template reuse + custom polish"],
+        ["Revision scope", "Endless self-tweaking", "Easily goes off track", "Focused feedback, clear rounds"],
+        ["Post-launch", "Handle yourself", "Usually extra cost", "Monthly maintenance available"],
+        ["Price transparency", "Compare yourself", "Verbal quotes", "Fixed packages + clear scope"],
+        ["SEO basics", "Self-configure", "Partially included", "Title/desc/structure/indexing tips"],
+        ["Redesign flexibility", "Free but time-consuming", "Depends on original team", "Template reuse + custom"]
+      ]
+    },
+    "cases": {
+      "title": "Featured Cases",
+      "subtitle": "See the websites we built for other businesses",
+      "viewAll": "View All Cases",
+      "viewCase": "View Case",
+      "empty": "No cases yet"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to common questions",
+      "items": [
+        {
+          "q": "Do you just let AI generate a website and deliver it?",
+          "a": "No. AI only improves efficiency for strategy, copy, and initial drafts. All client-facing pages go through human review, design refinement, responsive testing, and launch QA."
+        },
+        {
+          "q": "How long does it take to launch?",
+          "a": "Single-page sites typically take 3-7 days, standard business websites 7-14 days, and complex brand growth sites are assessed based on page count and material readiness."
+        },
+        {
+          "q": "What materials do I need to prepare?",
+          "a": "We recommend preparing company intro, products/services, target audience, contact info, logo, images, reference websites, and domain/hosting details. The more complete, the faster the delivery."
+        },
+        {
+          "q": "Do you guarantee SEO rankings?",
+          "a": "We don't guarantee specific rankings. We provide basic SEO titles, descriptions, page structure, and indexing recommendations. Ongoing content growth can be assessed separately."
+        },
+        {
+          "q": "Can you maintain the site after launch?",
+          "a": "Yes. Maintenance includes hosting, SSL, backups, minor copy edits, form checks, analytics reports, and ongoing optimization suggestions."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Submit your requirements and we'll respond within 24 hours.",
+      "button": "Submit Your Needs"
+    }
+  },
+  "footer": {
+    "brandName": "AI Website Factory",
+    "desc": "AI-assisted, professionally delivered website building service.",
+    "nav": {
+      "services": "Services",
+      "resources": "Resources",
+      "contact": "Contact"
+    },
+    "links": {
+      "pricing": "Pricing",
+      "cases": "Case Studies",
+      "process": "Our Process",
+      "maintenance": "Maintenance",
+      "about": "About Us",
+      "faq": "FAQ",
+      "contact": "Contact Us"
+    },
+    "copyright": "AI Website Factory. All rights reserved."
+  }
+}
