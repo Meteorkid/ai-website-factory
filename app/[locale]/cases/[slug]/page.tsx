@@ -77,14 +77,15 @@ const defaultConfig: DesignConfig = {
   cardStyle: "default",
 };
 
-function extractMetrics(result: string, metricLabels: { growth: string; growthRate: string; improvement: string; conversion: string; delivery: string; goal: string; achieved: string; satisfaction: string; score100: string; quality: string; excellent: string }) {
+function extractMetrics(result: string, metricLabels?: { growth: string; growthRate: string; improvement: string; conversion: string; delivery: string; goal: string; achieved: string; satisfaction: string; score100: string; quality: string; excellent: string }) {
+  const labels = metricLabels || { growth: "增长", growthRate: "增长率", improvement: "提升", conversion: "转化率", delivery: "交付周期", goal: "目标达成", achieved: "已达成", satisfaction: "满意度", score100: "100分", quality: "质量评分", excellent: "优秀" };
   const metrics: { icon: any; label: string; value: string; highlight: boolean }[] = [];
   const patterns = [
-    { regex: /(\d+)\+?\s*(次|个|位|家|条)/, label: metricLabels.growth },
-    { regex: /增长\s*(\d+%?)/, label: metricLabels.growthRate },
-    { regex: /提升\s*(\d+%?)/, label: metricLabels.improvement },
-    { regex: /转化率?\s*(?:达到|为|是)\s*(\d+\.?\d*%?)/, label: metricLabels.conversion },
-    { regex: /(\d+)\s*天/, label: metricLabels.delivery },
+    { regex: /(\d+)\+?\s*(次|个|位|家|条)/, label: labels.growth },
+    { regex: /增长\s*(\d+%?)/, label: labels.growthRate },
+    { regex: /提升\s*(\d+%?)/, label: labels.improvement },
+    { regex: /转化率?\s*(?:达到|为|是)\s*(\d+\.?\d*%?)/, label: labels.conversion },
+    { regex: /(\d+)\s*天/, label: labels.delivery },
   ];
 
   for (const p of patterns) {
@@ -97,16 +98,17 @@ function extractMetrics(result: string, metricLabels: { growth: string; growthRa
 
   if (metrics.length === 0) {
     metrics.push(
-      { icon: Target, label: metricLabels.goal, value: metricLabels.achieved, highlight: true },
-      { icon: Users, label: metricLabels.satisfaction, value: metricLabels.score100, highlight: true },
-      { icon: Award, label: metricLabels.quality, value: metricLabels.excellent, highlight: true },
+      { icon: Target, label: labels.goal, value: labels.achieved, highlight: true },
+      { icon: Users, label: labels.satisfaction, value: labels.score100, highlight: true },
+      { icon: Award, label: labels.quality, value: labels.excellent, highlight: true },
     );
   }
 
   return metrics;
 }
 
-function HeroSection({ caseData, config, images, strings }: { caseData: any; config: DesignConfig; images: CaseImages; strings: { breadcrumb: string; packageSuffix: string; deliverySuffix: string } }) {
+function HeroSection({ caseData, config, images, strings }: { caseData: any; config: DesignConfig; images: CaseImages; strings?: { breadcrumb: string; packageSuffix: string; deliverySuffix: string } }) {
+  const s = strings || { breadcrumb: "案例", packageSuffix: " 套餐", deliverySuffix: " 交付" };
   const isDark = config.style === "stripe" || config.style === "vercel" || config.style === "tesla" ||
     config.style === "energetic" || config.style === "industrial" || config.style === "authoritative" ||
     config.style === "tech-automotive";
@@ -154,7 +156,7 @@ function HeroSection({ caseData, config, images, strings }: { caseData: any; con
         <div className="mx-auto max-w-4xl text-center">
           {/* 面包屑导航 */}
           <div className="mb-6 flex items-center justify-center gap-2 text-sm" style={{ color: config.muted }}>
-            <Link href="/cases" className="hover:opacity-80 transition-opacity">{strings.breadcrumb}</Link>
+            <Link href="/cases" className="hover:opacity-80 transition-opacity">{s.breadcrumb}</Link>
             <ChevronRight className="h-3 w-3" />
             <span style={{ color: config.accent }}>{caseData.industry}</span>
           </div>
