@@ -584,6 +584,20 @@
       "bookConsult": "预约沟通",
       "viewPricing": "查看套餐"
     },
-    "backToList": "返回案例列表"
+    "backToList": "返回案例列表",
+    "list": {
+      "title": "真实案例，真实结果。",
+      "subtitle": "从 AI 工具到本地门店，我们为不同行业的客户交付可上线、可维护、可增长的官网。",
+      "noResults": "暂无匹配的案例",
+      "clearFilters": "清除筛选条件",
+      "ctaTitle": "你的行业不在列表里？",
+      "ctaSubtitle": "我们已经为多个行业交付了官网项目。无论你从事什么行业，都可以联系我们了解方案。",
+      "ctaButton": "提交需求"
+    },
+    "filter": {
+      "searchPlaceholder": "搜索案例...",
+      "all": "全部",
+      "clear": "清除筛选"
+    }
   }
 }

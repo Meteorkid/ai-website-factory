@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import CaseCard from "@/components/cases/CaseCard";
 import CaseFilter from "@/components/cases/CaseFilter";
 
@@ -26,6 +27,7 @@ interface CasesPageClientProps {
 }
 
 export default function CasesPageClient({ cases, industries }: CasesPageClientProps) {
+  const t = useTranslations("cases");
   const [filters, setFilters] = useState<{ industry: string | null; search: string }>({
     industry: null,
     search: "",

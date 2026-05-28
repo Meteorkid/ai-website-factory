@@ -584,6 +584,20 @@
       "bookConsult": "Book a Call",
       "viewPricing": "View Pricing"
     },
-    "backToList": "Back to Cases"
+    "backToList": "Back to Cases",
+    "list": {
+      "title": "Real Cases, Real Results.",
+      "subtitle": "From AI tools to local stores, we deliver launchable, maintainable, and growth-ready websites for clients across industries.",
+      "noResults": "No matching cases found",
+      "clearFilters": "Clear filters",
+      "ctaTitle": "Your industry not listed?",
+      "ctaSubtitle": "We have delivered website projects for multiple industries. No matter what industry you are in, feel free to contact us for a tailored solution.",
+      "ctaButton": "Submit Request"
+    },
+    "filter": {
+      "searchPlaceholder": "Search cases...",
+      "all": "All",
+      "clear": "Clear"
+    }
   }
 }
