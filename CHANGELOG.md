@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026-06-02
+
+### 已完成
+- 添加 hreflang 标签（多语言 SEO）：
+  - locale layout 添加 generateMetadata，为每个页面生成 alternates.languages（zh、en、x-default）
+  - 更新 sitemap.ts：为每个页面生成 zh/en 两个 URL 条目，每个条目包含 alternates.languages 映射
+  - 添加 canonical 指向当前 locale 路径
+- lint 和 build 验证通过
+
 ## 2026-06-01
 
 ### 已完成

@@ -297,3 +297,14 @@ TASKS.md 中的所有任务均已完成。当前状态：
 需要我做什么？
 
 第 79 轮结束 | 耗时: 44秒 | 2026年 5月28日 星期四 09时29分40秒 CST
+**本轮完成：添加 hreflang 标签（多语言 SEO）**
+
+做了什么：
+- `app/[locale]/layout.tsx` — 添加 `generateMetadata`，为每个页面生成 `alternates.languages`（zh、en、x-default）和 `canonical`，搜索引擎可正确识别多语言版本
+- `app/sitemap.ts` — 重构为多语言版本，每个页面生成 `/zh/xxx` 和 `/en/xxx` 两个 URL 条目，每个条目包含完整的语言映射
+
+验证结果：
+- `pnpm lint` 无新增错误
+- `pnpm build` 成功，sitemap.xml 正确生成
+
+第 80 轮结束 | 耗时: 156秒 | 2026年 5月28日 星期四 09时32分46秒 CST

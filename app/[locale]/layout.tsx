@@ -30,10 +30,29 @@ export const viewport: Viewport = {
   ],
 };
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-workshop.example.com"),
-  manifest: "/manifest.json",
-};
+const baseUrl = "https://ai-workshop.example.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    languages[l] = `/${l}`;
+  }
+  languages["x-default"] = "/";
+
+  return {
+    metadataBase: new URL(baseUrl),
+    manifest: "/manifest.json",
+    alternates: {
+      languages,
+      canonical: `/${locale}`,
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
