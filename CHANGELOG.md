@@ -1,5 +1,73 @@
 # CHANGELOG
 
+## 2026-05-29 (案例页优化与 Bug 修复)
+
+### 已完成
+- 案例页布局优化：Hero 区域间距 pb-20→pb-8，筛选区域 py-20→py-8，CaseFilter 标签缩小
+- 案例卡片区域添加 sr-only H2 标题，修复 H1→H3 标题层级跳跃
+- Header LocaleToggle 使用 usePathname() 替代 window.location，修复 React hydration error #418
+- 4 个英文案例标题改为中文（MetricFlow、Bright Smile Dental、Meridian Advisory、Soulflow Yoga）
+- 同步更新 dev.db 数据库中的标题
+- 优化脚本完成 23 个案例的独立设计、图片和商业叙事
+- 页面重写：首页、定价、流程、关于、联系、服务、行业方案
+- 新增组件：CaseCard（浏览器模拟+标签+指标）、CaseFilter（行业筛选+搜索+排序+视图切换）
+- 管理后台增强：案例管理、线索批量操作、统计数据
+- i18n 完善：修复 5 处硬编码文本，新增 socialProof/packages/notFound 翻译
+
+## 2026-05-29 (i18n 完善)
+
+### 已完成
+- 修复 5 处硬编码文本 i18n 问题：
+  - 根 layout metadata 改为英文 fallback，locale layout 增加 generateMetadata 生成语言相关的 title/description/keywords/openGraph/twitter
+  - 首页社会证明标题和行业列表改用 t() 翻译（home.socialProof.*）
+  - Footer 套餐名（Starter/Pro/Premium）改用 t() 翻译（footer.packages.*）
+  - 新增 notFound 命名空间（title/description/backHome）
+  - 新增 LocaleHtmlAttr 组件动态设置 `<html lang>` 属性
+- 翻译文件更新：zh.json / en.json 新增 socialProof、packages、notFound 键
+- Lint: 0 errors, 7 warnings（Unsplash `<img>` 预期 warning）
+- Build: 通过（37 路由，26 静态页面）
+
+## 2026-05-29 (下午)
+
+### 已完成
+- 23 Agent 企业级优化 - Batch 2 & 3 后续 agent 完成：
+  - Agent 07 响应式优化：clamp() fluid headings（7 个页面）、StickyMobileCTA padding 修复、timeline 移动端间距
+  - Agent 09 产品服务模块：创建 /services 页面（服务层级卡片+对比矩阵+流程+CTA）
+  - Agent 10 行业解决方案：创建 /solutions 页面（6 个行业卡片+How It Works+CTA）
+  - Agent 13 SEO metadata：JSON-LD 结构化数据 + generateMetadata
+  - Agent 14 性能优化：img width/height CLS 防护
+  - Agent 15 无障碍：aria-label、aria-hidden、aria-expanded、sr-only labels（20+ 图标）
+  - Agent 20 内容合规：example.com 全部替换为 NEXT_PUBLIC_BASE_URL 环境变量（6 个文件）
+  - Agent 21 测试质量：lint 验证通过
+- Header 导航新增"服务"和"行业方案"入口
+- Agent 04 营销文案重写：8 个 section 文案优化（hero/cta/serviceValues/packages/pricing/process/about/contact）
+- Agent 16 组件库：Button/Badge/SectionHeader 3 个可复用组件 + CtaSection/FeaturedCasesSection/CaseCard/InsightsSection 集成
+- Agent 18 表单优化：未完成（API 连接中断，i18n keys 部分添加）
+- Sitemap 更新：新增 /services 和 /solutions 路由
+- Header 导航新增"服务"和"行业方案"入口
+- Lint: 0 errors, 7 warnings（Unsplash `<img>` 预期 warning）
+- Build: 通过
+
+## 2026-05-29
+
+### 已完成
+- 23 Agent 企业级优化 - Batch 1 & 2 & 3 执行：
+  - 首页 Hero 重写：渐变背景装饰、信任指标卡片、行业社会证明、Unsplash 背景图
+  - About 页面重写：6 段企业级布局（Hero/团队/时间线/价值观/CTA）+ Unsplash 图片
+  - Pricing 页面重写：5 段高端 SaaS 风格（Hero/定价卡/对比表/FAQ/CTA）
+  - Contact 页面重写：分栏表单+联系信息卡片，字段精简至 6 个
+  - Process 页面重写：7 步垂直时间线+验收标准
+  - 英文案例数据新增 4 条（共 23 条）
+  - 首页新增"行业洞察"Insights 区块（6 篇文章卡片）
+  - 滚动动画：FadeIn 组件 + 全站 section 包裹
+  - SEO：JSON-LD 结构化数据（Service/Product/FAQPage/BreadcrumbList）
+  - 转化路径：移动端底部 Sticky CTA 栏
+  - 图片素材：Unsplash 可商用图片（Hero/About/Cases）
+  - 品牌视觉：修复硬编码颜色（LazyImage gray → surface-2）
+- Lint 错误修复（22 errors → 0）
+- Lint: 0 errors, 5 warnings（`<img>` Unsplash 外部图片）
+- Build: 通过
+
 ## 2026-06-02
 
 ### 已完成
