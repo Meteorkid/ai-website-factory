@@ -1,14 +1,41 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "@/lib/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { Menu, Moon, Sparkles, Sun, X } from "lucide-react";
+import { Link, usePathname } from "@/lib/i18n/navigation";
+import { Languages, Menu, Moon, Sparkles, Sun, X } from "lucide-react";
+
+function LocaleToggle({ className }: { className?: string }) {
+  const t = useTranslations("header");
+  const pathname = usePathname();
+
+  const isEn = pathname.startsWith("/en");
+  const targetLocale = isEn ? "zh" : "en";
+  const label = isEn ? "中" : "EN";
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const rawPath = pathname.replace(/^\/(en|zh)/, "") || "/";
+    window.location.href = `/${targetLocale}${rawPath}`;
+  };
+
+  return (
+    <a
+      href="#"
+      onClick={handleClick}
+      className={className}
+      aria-label={t("localeToggle")}
+      title={t("localeToggle")}
+    >
+      <Languages className="h-4 w-4" />
+      <span>{label}</span>
+    </a>
+  );
+}
 
 export default function Header() {
   const t = useTranslations("header");
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -16,6 +43,8 @@ export default function Header() {
     { label: t("nav.home"), href: "/" },
     { label: t("nav.pricing"), href: "/pricing" },
     { label: t("nav.cases"), href: "/cases" },
+    { label: t("nav.solutions"), href: "/solutions" },
+    { label: t("nav.services"), href: "/services" },
     { label: t("nav.process"), href: "/process" },
     { label: t("nav.maintenance"), href: "/maintenance" },
     { label: t("nav.about"), href: "/about" },
@@ -40,6 +69,17 @@ export default function Header() {
     setIsOpen(false);
     toggleButtonRef.current?.focus();
   }, []);
+
+  const handleNavClick = useCallback(
+    (href: string, close?: boolean) => (e: React.MouseEvent) => {
+      e.preventDefault();
+      const isEn = window.location.pathname.startsWith("/en");
+      const prefix = isEn ? "/en" : "/zh";
+      window.location.href = prefix + href;
+      if (close) closeMenu();
+    },
+    [closeMenu]
+  );
 
   useEffect(() => {
     if (!isOpen) return;
@@ -81,10 +121,6 @@ export default function Header() {
   }, [isOpen, closeMenu]);
 
   useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     const mql = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       if (localStorage.getItem("theme") !== null) return;
@@ -117,29 +153,23 @@ export default function Header() {
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`rounded-full px-3 py-2 text-sm transition-colors ${
-                    isActive
-                      ? "bg-accent-soft text-accent"
-                      : "text-muted hover:text-foreground"
-                  }`}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={handleNavClick(item.href)}
+                className="rounded-full px-3 py-2 text-sm text-muted transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           <div className="hidden items-center gap-2 md:flex">
             <Link href="/dashboard" className="glass-button px-4 py-2.5 text-sm">
               {t("myProject")}
             </Link>
+            <LocaleToggle className="glass-button flex h-10 items-center gap-1.5 px-3 text-sm font-medium" />
             <button
               type="button"
               onClick={toggleTheme}
@@ -156,6 +186,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
+            <LocaleToggle className="glass-button flex h-10 items-center gap-1 px-3 text-sm font-medium" />
             <button
               type="button"
               onClick={toggleTheme}
@@ -195,26 +226,20 @@ export default function Header() {
         >
           <div className="liquid-glass mx-auto mt-2 max-w-[1120px] rounded-3xl p-3">
             <div className="grid gap-1">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`rounded-2xl px-4 py-3 text-sm transition-colors ${
-                      isActive ? "bg-accent-soft text-accent" : "text-muted hover:text-foreground"
-                    }`}
-                    aria-current={isActive ? "page" : undefined}
-                    onClick={closeMenu}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={handleNavClick(item.href, true)}
+                  className="rounded-2xl px-4 py-3 text-sm text-muted transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
                 href="/contact"
+                onClick={handleNavClick("/contact", true)}
                 className="amber-button mt-2 px-5 py-3 text-sm"
-                onClick={closeMenu}
               >
                 {t("bookConsult")}
               </Link>
